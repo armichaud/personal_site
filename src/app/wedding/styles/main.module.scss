@@ -1,0 +1,417 @@
+@use 'base';
+
+.Wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px;
+}
+
+.Video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.VideoOverlay {
+  font-family: 'BlantePanamaScript';
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 48px;
+  position: fixed;
+  bottom: 15vh;
+}
+
+.DisplayNone {
+  display: none;
+}
+
+.Hero {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Castle {
+  height: 40vw;
+  width: 60vw;
+  object-fit: cover;
+
+  @media screen and (max-width: 600px) {
+    width: 70vw;
+    height: 45vw;
+  }
+}
+
+.JoinUs {
+  text-align: center;
+  margin: 48px 0 24px;
+  font-family: 'MinionVariableItalic';
+  font-size: 48px;
+}
+
+.Names {
+  font-family: 'BlantePanamaScript';
+  font-size: 64px;
+  text-align: center;
+  margin-top: 28px;
+
+  @media screen and (max-width: 600px) {
+    line-height: 48px;
+  }
+}
+
+.Countdown {
+  text-align: center;
+  padding: 56px 0 0;
+  font-family: 'MinionVariableRoman';
+  font-size: 28px;
+}
+
+.Container {
+  margin-top: 54px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Main {
+  width: 75vw;
+}
+
+.MenuText {
+  margin-left: 16px;
+  font-size: 24px;
+}
+
+.Divider {
+  margin-top: 48px;
+  filter: invert(35%) sepia(6%) saturate(1339%) hue-rotate(341deg)
+    brightness(94%) contrast(88%);
+  padding: 0 10vw;
+  @media screen and (max-width: 600px) {
+    padding: 0 7.5vw;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 0 15vw;
+  }
+}
+
+.Modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ImageListItem,
+.SpotlightImage {
+  border-radius: 12px;
+}
+
+.SpotlightImageContainer {
+  z-index: 100;
+}
+
+.SpotlightImage {
+  max-width: 80vw;
+  max-height: 80vh;
+  filter: drop-shadow(8px 8px 8px black);
+}
+
+.ArrowLeft.root,
+.ArrowRight.root {
+  z-index: 200;
+  bottom: 50vh;
+  height: 3vw;
+  width: 3vw;
+  position: absolute;
+  color: white;
+
+  @media screen and (max-width: 600px) {
+    width: 8vw;
+    height: 8vw;
+  }
+}
+
+.ArrowLeft.root {
+  left: 5vw;
+}
+
+.ArrowRight.root {
+  right: 5vw;
+}
+
+.Author {
+  font-family: 'MinionVariableItalic';
+  font-size: 14px;
+  text-align: right;
+  margin: 36px 0;
+}
+
+.Container {
+  align-items: normal;
+  h1 {
+    font-size: 48px;
+    margin-bottom: 72px;
+    line-height: 48px;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  div {
+    margin-bottom: 18px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.Attire {
+  text-align: center;
+
+  .AttireOccasion {
+    margin-bottom: 48px;
+  }
+
+  .Gender {
+    font-weight: 900;
+  }
+
+  h2 {
+    margin-bottom: 8px;
+  }
+
+  div {
+    margin-bottom: 8px;
+  }
+}
+
+.Schedule {
+  .ScheduleDay {
+    margin-bottom: 48px;
+  }
+  .ScheduleDetails {
+    text-align: center;
+  }
+  .EventHour {
+    font-weight: 900;
+  }
+}
+
+.CastleHistory > div {
+  margin-bottom: 48px;
+}
+
+.SpecialActivities,
+.Photos {
+  h1 {
+    @media screen and (max-width: 600px) {
+      line-height: 52px;
+    }
+  }
+}
+
+.SpecialActivities {
+  li {
+    margin: 8px 0;
+  }
+
+  span {
+    font-weight: 900;
+  }
+}
+
+.Accommodations {
+  h1 {
+    @media screen and (max-width: 600px) {
+      font-size: 36px;
+    }
+  }
+}
+
+div.PhotoComment {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.QRCodes {
+  display: flex;
+  flex-direction: row;
+  margin-top: 48px;
+  justify-content: center;
+
+  .Code {
+    max-width: 35vw;
+
+    @media screen and (max-width: 600px) {
+      max-width: 50vw;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(4px 4px 4px black);
+  }
+
+  img.PayPal {
+    border-radius: 0.4em;
+  }
+
+  img.Venmo {
+    transform: scale(1.08);
+  }
+}
+
+.Italic {
+  font-style: italic;
+}
+
+.RsvpContainer {
+  div.Instructions {
+    margin-bottom: 36px;
+  }
+
+  .RSVP {
+    display: flex;
+    flex-direction: column;
+
+    .TextField.Root > p {
+      font-family: 'MinionVariableRoman';
+      font-size: 14px;
+    }
+
+    .Select.Root {
+      margin-bottom: 0;
+      line-height: 22px;
+    }
+
+    .InputLabel.Root {
+      font-family: 'MinionVariableRoman';
+    }
+
+    .TextField.Root,
+    .Select.Root {
+      font-size: 18px;
+      font-family: 'MinionVariableRoman';
+      line-height: 26px;
+
+      div,
+      label {
+        font-family: 'MinionVariableRoman';
+      }
+    }
+
+    .SearchButton.Root {
+      font-family: 'MinionVariableRoman';
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 24px;
+    }
+
+    .MealSelection {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      label.Checkbox.Root {
+        margin-right: 0;
+
+        span {
+          font-family: 'MinionVariableRoman';
+        }
+      }
+
+      .Select.Root {
+        text-align: left;
+      }
+
+      button {
+        margin: 12px 0;
+        font-family: 'MinionVariableRoman';
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.MenuProps.Paper > ul > li {
+  font-family: 'MinionVariableRoman';
+}
+
+.Contact.Main {
+  div {
+    margin-bottom: 24px;
+
+    div {
+      margin-bottom: auto;
+    }
+
+    div:first-child {
+      font-weight: 700;
+    }
+  }
+}
+
+.ContactInfo {
+  text-align: center;
+}
+
+.Infinity.Pool {
+  display: flex;
+  justify-content: center;
+
+  img {
+    border-radius: 12px;
+    filter: drop-shadow(4px 4px 4px black);
+    max-width: 100%;
+  }
+  margin-bottom: 48px;
+}
+
+.MealsAlreadySelected {
+  div.Selection {
+    margin-left: 14px;
+    margin-bottom: 12px;
+  }
+
+  div.GetInTouch {
+    margin-top: 6px;
+  }
+}
+
+.MealPreferenceBold {
+  font-weight: 600;
+}
+
+.FeastEntrees {
+  font-family: 'MinionVariableItalic';
+  text-align: center;
+}
+
+.SelectionInstructions,
+.SelectionInstructions.Root {
+  text-align: left;
+  font-family: 'MinionVariableRoman';
+  margin-bottom: 18px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.CastleMap {
+  .iFrame {
+    min-height: 600px;
+  }
+}
