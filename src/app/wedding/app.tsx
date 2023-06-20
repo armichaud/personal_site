@@ -18,6 +18,7 @@ import Countdown from './components/countdown';
 import MenuIcon from '@mui/icons-material/Menu';
 import { IconButton } from '@mui/material';
 import Divider from './divider';
+import Image from 'next/image';
 
 const Main = (): JSX.Element => {
   const videoRef = useRef() as React.RefObject<HTMLVideoElement>;
@@ -115,7 +116,7 @@ const Main = (): JSX.Element => {
           </IconButton>
           <div className={s.Hero}>
             <div className={s.JoinUs}>Thanks for Joining Us!</div>
-            <img className={s.Castle} src={castle} alt="castle" />
+            <Image className={s.Castle} src={castle} alt="castle" />
             <div className={s.Names}>Andrea and Alexander</div>
           </div>
           <Countdown />
