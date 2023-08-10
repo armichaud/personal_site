@@ -1,5 +1,21 @@
 @use 'base';
 
+@font-face {
+  font-family: 'BlantePanamaScript';
+  src: local('BlantePanamaScript'),
+    url('../fonts/BlantePanamaScript.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'MinionVariableRoman';
+  src: local('MinionVariableRoman'),
+    url('../fonts/MinionVariableRoman.otf') format('opentype');
+}
+@font-face {
+  font-family: 'MinionVariableItalic';
+  src: local('MinionVariableItalic'),
+    url('../fonts/MinionVariableItalic.otf') format('opentype');
+}
+
 .Wrapper {
   display: flex;
   justify-content: center;

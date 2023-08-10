@@ -1,6 +1,5 @@
 import * as React from 'react';
-import s from '../../../styles/main.module.scss';
-import { searchGuest, submitMealPreference } from '../../../api';
+import s from '../../styles/main.module.scss';
 import {
   TextField,
   Button,
@@ -15,14 +14,14 @@ import {
   Checkbox,
   FormLabel,
 } from '@mui/material';
-import { GuestData } from '../../../types';
+import { GuestData } from '../../types';
 import { isNil } from 'lodash';
 import classNames from 'classnames';
 import {
   DietaryRestrictions,
   Entrees,
   MealPreferenceFormData,
-} from '../../../constants/meal_preferences';
+} from '../../constants/meal_preferences';
 
 const submissionErrors = {
   generic:
@@ -100,7 +99,8 @@ const Meals = (): JSX.Element => {
       });
       setMatches([]);
     };
-    searchGuest(firstName, lastName, callback, handleError);
+    // searchGuest(firstName, lastName, callback, handleError);
+    // TODO Remove backend stuff
   };
 
   const handleMealChange = (event: SelectChangeEvent) => {
@@ -149,14 +149,15 @@ const Meals = (): JSX.Element => {
       if (data.message && data.message.length && data.message[0])
         return setMealsSubmitted(true);
     };
-    submitMealPreference(
-      selectedGuestId,
-      mealsSelected.meal,
-      mealsSelected.dietaryRestrictions,
-      mealsSelected.allergies,
-      callback,
-      handleError
-    );
+    // TODO Remove backend stuff
+    // submitMealPreference(
+    //   selectedGuestId,
+    //   mealsSelected.meal,
+    //   mealsSelected.dietaryRestrictions,
+    //   mealsSelected.allergies,
+    //   callback,
+    //   handleError
+    // );
   };
 
   const selectedGuestData = selectedGuestId

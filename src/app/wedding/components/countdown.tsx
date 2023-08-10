@@ -1,5 +1,5 @@
 import * as React from 'react';
-import s from '../../styles/main.module.scss';
+import s from '../styles/main.module.scss';
 
 const Countdown = (): JSX.Element => {
   const today = new Date();

@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import * as React from 'react';
-import s from '../../../styles/main.module.scss';
+import s from '../../styles/main.module.scss';
 
 const SpecialActivities = (): JSX.Element => (
   <div className={s.SpecialActivities}>

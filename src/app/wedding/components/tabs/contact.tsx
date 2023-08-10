@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import * as React from 'react';
-import s from '../../../styles/main.module.scss';
+import s from '../../styles/main.module.scss';
 
 const alexanderEmail = 'alexander.michaud@aya.yale.edu';
 const andreaEmail = 'andrea.c.zurita11@gmail.com';

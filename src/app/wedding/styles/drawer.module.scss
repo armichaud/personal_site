@@ -1,4 +1,8 @@
-@use 'base';
+@font-face {
+  font-family: 'MinionVariableRoman';
+  src: local('MinionVariableRoman'),
+    url('../fonts/MinionVariableRoman.otf') format('opentype');
+}
 
 .Drawer.Root {
   width: 30vw;

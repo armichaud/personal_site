@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Backdrop, Fade, ImageList, ImageListItem, Modal } from '@mui/material';
 import { VENUE_PHOTOS, ENGAGEMENT_PHOTOS } from './photo_lists';
 
-import s from '../../../styles/main.module.scss';
+import s from '../../styles/main.module.scss';
 import {
   ArrowCircleLeftTwoTone,
   ArrowCircleRightTwoTone,

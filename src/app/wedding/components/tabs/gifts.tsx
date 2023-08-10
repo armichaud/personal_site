@@ -1,5 +1,5 @@
 import * as React from 'react';
-import s from '../../../styles/main.module.scss';
+import s from '../../styles/main.module.scss';
 
 const venmoLink = 'https://venmo.com/code?user_id=1702589049602048491';
 const venmoSrc =
