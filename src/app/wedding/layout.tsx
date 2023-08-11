@@ -3,9 +3,6 @@ import favicon from './favicon.ico';
 export const metadata = {
     title: "Andrea and Alexander's Wedding",
     description: 'May 23, 2023 in Tuscany, Italy',
-    icons: {
-        icon: favicon,
-    } 
 }
 
 export default function WeddingLayout({
