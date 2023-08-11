@@ -12,8 +12,8 @@ const nextConfig = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'videos/', // adjust the output path as needed
-              publicPath: '_next/static/videos/', // adjust the public path as needed
+              outputPath: 'static/videos/',
+              publicPath: '/_next/static/videos/',
             },
           },
         });
