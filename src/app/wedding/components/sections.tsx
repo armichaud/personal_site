@@ -14,6 +14,7 @@ import SpecialActivities from './tabs/special_activities';
 import cn from 'classnames';
 import s from '../styles/drawer.module.scss';
 import Contact from './tabs/contact';
+import Intro from './tabs/intro';
 
 export type SectionType = {
   label: string;
@@ -21,6 +22,10 @@ export type SectionType = {
 };
 
 export const Sections: SectionType[] = [
+  {
+    label: 'Intro',
+    content: <Intro />,
+  },
   {
     label: 'Schedule',
     content: <Schedule />,

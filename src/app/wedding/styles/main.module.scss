@@ -312,6 +312,10 @@ div.PhotoComment {
 }
 
 .RsvpContainer {
+  a {
+    text-decoration: underline;
+  }
+
   div.Instructions {
     margin-bottom: 36px;
   }
