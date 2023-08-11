@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import * as React from 'react';
 
 const Intro = (): JSX.Element => {
