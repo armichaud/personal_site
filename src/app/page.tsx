@@ -3,10 +3,25 @@ import TabbedContent from "./tabbed_content";
 
 const tabs = [
   {
+    id: 'home',
+    label: 'Home',
+    content: <></>
+  },
+  {
+    id: 'projects',
+    label: 'Projects',
+    content: <></>
+  },
+  {
     id: 'resume',
     label: 'Résumé',
     content: <Resume />,
-  }
+  },
+  {
+    id: 'other',
+    label: 'Beyond Engineering',
+    content: <></>
+  },
 ]
 
 const Home = (): JSX.Element => {
