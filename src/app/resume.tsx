@@ -18,7 +18,7 @@ const JobExperience: React.FC<JobExperienceProps> = ({
 }) => (
     <div className="p-4 border rounded-md shadow-md mb-4">
         <h2 className="text-xl font-semibold">{jobTitle}</h2>
-        <p className="text-gray-600">
+        <p className="text-gray-600 dark-grey">
             {company} | {startDate} - {endDate}
         </p>
         <ul className="list-disc list-inside">

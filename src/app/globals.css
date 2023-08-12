@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1, h2, p {
+  @apply dark:text-white;
+}
+
+p.dark-grey {
+    @apply dark:text-gray-400;
+}
+
+.dark li::marker {
+    color: white;
+}
