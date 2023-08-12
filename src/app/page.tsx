@@ -1,3 +1,4 @@
+import Projects from "./projects";
 import Resume from "./resume";
 import TabbedContent from "./tabbed_content";
 
@@ -10,7 +11,7 @@ const tabs = [
   {
     id: 'projects',
     label: 'Projects',
-    content: <></>
+    content: <Projects />
   },
   {
     id: 'resume',
