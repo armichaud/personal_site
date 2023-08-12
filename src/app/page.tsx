@@ -4,7 +4,7 @@ import TabbedContent from "./tabbed_content";
 const tabs = [
   {
     id: 'resume',
-    label: 'Resumé',
+    label: 'Résumé',
     content: <Resume />,
   }
 ]
