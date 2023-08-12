@@ -17,9 +17,9 @@ const JobExperience: React.FC<JobExperienceProps> = ({
   bullets,
 }) => (
     <div className="p-4 border rounded-md shadow-md mb-4">
-        <h2 className="text-xl font-semibold">{jobTitle}</h2>
+        <h2 className="text-xl font-semibold">{company} | {jobTitle}</h2>
         <p className="text-gray-600 dark-grey">
-            {company} | {startDate} - {endDate}
+            {startDate} - {endDate}
         </p>
         <ul className="list-disc list-inside">
             {bullets.map((bullet, index) => (
