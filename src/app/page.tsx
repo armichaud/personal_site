@@ -1,12 +1,13 @@
 import Projects from "./projects";
 import Resume from "./resume";
+import Intro from "./intro";
 import TabbedContent from "./tabbed_content";
 
 const tabs = [
   {
-    id: 'home',
-    label: 'Home',
-    content: <></>
+    id: 'intro',
+    label: 'Intro',
+    content: <Intro />
   },
   {
     id: 'projects',
