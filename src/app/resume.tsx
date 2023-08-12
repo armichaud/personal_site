@@ -6,7 +6,7 @@ export interface JobExperienceProps {
   company: string;
   startDate: string;
   endDate: string;
-  description: string;
+  bullets: string[];
 }
 
 const JobExperience: React.FC<JobExperienceProps> = ({
@@ -14,14 +14,18 @@ const JobExperience: React.FC<JobExperienceProps> = ({
   company,
   startDate,
   endDate,
-  description,
+  bullets,
 }) => (
     <div className="p-4 border rounded-md shadow-md mb-4">
         <h2 className="text-xl font-semibold">{jobTitle}</h2>
         <p className="text-gray-600">
             {company} | {startDate} - {endDate}
         </p>
-        <p className="mt-2">{description}</p>
+        <ul className="list-disc list-inside">
+            {bullets.map((bullet, index) => (
+                <li key={index}><p className="mt-2">{bullet}</p></li>
+            ))}
+        </ul>
     </div>
 );
 
