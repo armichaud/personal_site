@@ -205,7 +205,7 @@ const favoriteBooks: Book[] = [
         author: 'Michael Chabon'
     },
     {
-        title: 'The Good Earther',
+        title: 'The Good Earth',
         author: 'Pearl S. Buck'
     },
     {
