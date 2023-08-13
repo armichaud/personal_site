@@ -1,5 +1,4 @@
 import './globals.css'
-import ThemeToggle from './theme_toggle'
 
 export const metadata = {
   title: 'Alexander Rodion Michaud',
@@ -14,8 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="min-h-screen flex flex-col justify-center items-center dark:bg-gray-900">
-          <ThemeToggle />
+        <div className="flex flex-col justify-center items-start pt-[5vh] dark:bg-gray-900">
           {children}
         </div>
       </body>
