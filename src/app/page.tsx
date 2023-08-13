@@ -29,11 +29,6 @@ const tabs = [
   {
     id: 'beyond_engineering',
     label: 'Beyond Engineering',
-    content: <></>
-  },
-  {
-    id: 'hobbies_and_interests',
-    label: 'Hobbies and Interests',
     content: <Interests />
   },
 ]

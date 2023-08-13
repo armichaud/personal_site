@@ -1,5 +1,7 @@
 'use client'
 
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
 import React, { useState, useEffect } from 'react';
 
 const ThemeToggle = () => {
@@ -31,42 +33,11 @@ const ThemeToggle = () => {
   }, [theme]);
 
   return (
-    <button
-      onClick={toggleTheme}
-      className="p-2 rounded-full focus:outline-none"
-    >
-      {theme === 'light' ? (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          className="w-6 h-6"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-          />
-        </svg>
-      ) : (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          className="w-6 h-6"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 18.73a9 9 0 01-9-9 9 9 0 009 9z"
-          />
-        </svg>
-      )}
-    </button>
+    <FormControlLabel control={<Switch
+          checked={theme === 'dark'}
+          onChange={toggleTheme}
+          color="default"
+          inputProps={{ 'aria-label': 'theme toggle' }} />} label={undefined}    />
   );
 };
 
