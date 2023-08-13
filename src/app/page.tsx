@@ -2,11 +2,12 @@ import Projects from "./projects";
 import Resume from "./resume";
 import Intro from "./intro";
 import TabbedContent from "./tabbed_content";
+import Education from "./education";
 
 const tabs = [
   {
-    id: 'intro',
-    label: 'Intro',
+    id: 'me',
+    label: 'Me',
     content: <Intro />
   },
   {
@@ -22,7 +23,7 @@ const tabs = [
   {
     id: 'education',
     label: 'Education',
-    content: <></>
+    content: <Education />
   },
   {
     id: 'beyond_engineering',

@@ -27,8 +27,8 @@ const TabbedContent: React.FC<TabbedContentProps> = ({ tabs }) => {
             key={tab.id}
             onClick={() => handleTabClick(tab.id)}
             className={`${
-              activeTab === tab.id ? 'bg-blue-500 text-white' : 'text-blue-500'
-            } hover:bg-blue-200 focus:outline-none px-4 py-2 rounded-t-lg`}
+              activeTab === tab.id ? 'bg-orange-500 text-white' : 'text-orange-500'
+            } hover:bg-orange-200 focus:outline-none px-4 py-2 rounded-t-lg`}
           >
             {tab.label}
           </button>
