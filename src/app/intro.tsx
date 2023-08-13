@@ -43,13 +43,11 @@ const Intro: React.FC = () => {
         <div className="flex flex-col items-center justify-center h-full">
             <h1 className="text-4xl font-semibold mb-4">Alexander Rodion Michaud</h1>
             <p className='dark:text-white'>or ARM, if you&apos;re in a hurry</p>
-            <div className='flex p-4 justify-between'>
+            <div className='flex p-4 justify-between align-center sm:flex-row'>
                 <div className='w-1/2'>
                     <img className="rounded-lg w-full" src="https://imagedelivery.net/Xh-8qVol1Pftdals16ieKg/ccbbd565-53b4-4780-7fee-b4bcef64c100/public" alt="profile_pic" /> 
                 </div>
-                <section className="px-6 py-6 w-1/2">
-                    <div className="max-w-4xl mx-auto">
-                        <div className="text-gray-600 space-y-4">
+                <section className="p-6 w-1/2 flex flex-col justify-around">
                         <div className='flex flex-col justify-center'>
                             <h2 className="text-3xl font-semibold mb-4 text-center">Where I've Worked</h2> 
                             <CompanyIconsRow />
@@ -57,7 +55,7 @@ const Intro: React.FC = () => {
                         <div className='flex flex-col justify-center'>
                             <h2 className="text-3xl font-semibold mb-4 text-center">What I've Worked With </h2>
                             <p className='text-center'>
-                                Ruby on Rails, Node.js, TypeScript, JavaScript, Ruby, PHP, Python
+                                Ruby on Rails, Node.js, TypeScript, JavaScript, PHP, Python
                             </p>
                         </div>
                         <div className='flex flex-col justify-center'>
@@ -66,8 +64,6 @@ const Intro: React.FC = () => {
                                 Contributing to open source projects, learning Rust.
                             </p>
                         </div>
-                        </div>
-                    </div>
                 </section>
             </div>
         </div>
