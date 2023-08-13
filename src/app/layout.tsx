@@ -12,8 +12,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <div className="flex flex-col justify-center items-start pt-[5vh] dark:bg-gray-900">
+      <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri"></link>
+      </head>
+      <body className="dark:bg-gray-900">
+        <div className="flex flex-col justify-center">
           {children}
         </div>
       </body>

@@ -21,7 +21,7 @@ const TabbedContent: React.FC<TabbedContentProps> = ({ tabs }) => {
   };
 
   return (
-    <div className="bg-white p-4 w-[85vw] rounded-lg shadow dark:bg-gray-900">
+    <div className="bg-white p-4 rounded-lg shadow dark:bg-gray-900">
       <div className="flex border-b border-gray-200">
         {tabs.map((tab) => (
           <button
@@ -36,7 +36,7 @@ const TabbedContent: React.FC<TabbedContentProps> = ({ tabs }) => {
         ))}
         <ThemeToggle />
       </div>
-      <div className="p-4 w-[85vw]">{tabs.find((tab) => tab.id === activeTab)?.content}</div>
+      <div className="p-4">{tabs.find((tab) => tab.id === activeTab)?.content}</div>
     </div>
   );
 };

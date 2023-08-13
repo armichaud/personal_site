@@ -145,7 +145,7 @@ const FavoriteMovies: React.FC = () => {
     return (
       <div>
         <h2 className="text-2xl font-semibold mb-4">Favorite Movies</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {favoriteFilms.map((movie, index) => (
             <div key={index} className="border p-4 rounded-lg shadow">
                 <a
@@ -158,8 +158,8 @@ const FavoriteMovies: React.FC = () => {
                 </a>
               <p className="text-gray-600 mb-2">{movie.director}</p>
               {movie.imgUrl && (
-                <div className="flex flex-col">
-                    <img src={movie.imgUrl} alt={`${movie.title} Poster`} className="mb-2" />
+                <div className="flex flex-col  max-w-[220px]">
+                    <img src={movie.imgUrl} alt={`${movie.title} Poster`} className="mb-2 max-h-[300px]" />
                 </div>
               )}
             </div>

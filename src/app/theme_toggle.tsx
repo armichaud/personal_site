@@ -33,11 +33,15 @@ const ThemeToggle = () => {
   }, [theme]);
 
   return (
-    <FormControlLabel control={<Switch
+    <div className="ml-auto">
+        <FormControlLabel control={<Switch
           checked={theme === 'dark'}
           onChange={toggleTheme}
           color="default"
-          inputProps={{ 'aria-label': 'theme toggle' }} />} label={undefined}    />
+          inputProps={{ 'aria-label': 'theme toggle' }} />} 
+          label={undefined}    
+        />
+    </div>
   );
 };
 
