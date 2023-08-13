@@ -1,0 +1,256 @@
+const STATS_URL = 'https://api.chess.com/pub/player/magnanimus1994/stats';
+
+const getRatings = async () => {
+    const response = await fetch(STATS_URL);
+    const data = await response.json();
+    const {chess_rapid: {last: {rapid_rating}}, chess_blitz: {last: {blitz_raiting}} } = data;
+    return {rapid_rating, blitz_raiting};
+}
+
+// Chess
+// Guitar
+// Films
+
+interface Film {
+    title: string;
+    year: number;
+    director: string;
+    imgUrl?: string;
+    link?: string;
+}
+
+const favoriteFilms: Film[] = [
+    {
+        title: 'Persona',
+        year: 1966,
+        director: 'Ingmar Bergman',
+        imgUrl: '',
+        link: 'https://www.imdb.com/title/tt0060827/'
+    },
+    {
+        title: 'A Bout de Souffle',
+        year: 1960,
+        director: 'Jean-Luc Godard',
+        imgUrl: '',
+        link: 'https://www.imdb.com/title/tt0053472/'
+    },
+    {
+        title: 'Cinema Paradiso',
+        year: 1988,
+        director: 'Giuseppe Tornatore',
+        imgUrl: '',
+        link: 'https://www.imdb.com/title/tt0095765/'
+    },
+    {
+        title: 'Black Orpheus',
+        year: 1959,
+        director: 'Marcel Camus',
+        imgUrl: '',
+        link: 'https://www.imdb.com/title/tt0053146/'
+    },
+    {
+        title: 'Fargo',
+        year: 1996,
+        director: 'Ethan & Joel Coen',
+        imgUrl: '',
+        link: 'https://www.imdb.com/title/tt0116282/'
+    },
+    {
+        title: 'The Royal Tenenbaums',
+        year: 2001,
+        director: 'Wes Anderson',
+        imgUrl: '',
+        link: 'https://www.imdb.com/title/tt0265666/'
+    },
+    {
+        title: 'The Graduate',
+        year: 1967,
+        director: 'Mike Nichols',
+        imgUrl: '',
+        link: 'https://www.imdb.com/title/tt0061722/'
+    },
+    {
+        title: 'The Red Shoes',
+        year: 1948,
+        director: 'Michael Powell & Emeric Pressburger',
+        imgUrl: '',
+        link: 'https://www.imdb.com/title/tt0040725/'
+    },
+    {
+        title: 'Amores Perros',
+        year: 2000,
+        director: 'Alejandro González Iñárritu',
+        imgUrl: '',
+        link: 'https://www.imdb.com/title/tt0245712/'
+    },
+    {
+        title: 'The Juniper Tree',
+        year: 1990,
+        director: 'Nietzchka Keene',
+        imgUrl: '',
+        link: 'https://www.imdb.com/title/tt0099902/'
+    },
+    {
+        title: 'The Discrete Charm of the Bourgeoisie',
+        year: 1972,
+        director: 'Luis Buñuel',
+        imgUrl: '',
+        link: 'https://www.imdb.com/title/tt0068361/'
+    },
+    {
+        title: 'Fanny and Alexander',
+        year: 1982,
+        director: 'Ingmar Bergman',
+        imgUrl: '',
+        link: 'https://www.imdb.com/title/tt0083922/'
+    },
+    {
+        title: 'A Serious Man',
+        year: 2009,
+        director: 'Ethan & Joel Coen',
+        // imgUrl: '',
+        link: 'https://www.imdb.com/title/tt1019452/'
+    },
+    {
+        title: 'The Last Days of Disco',
+        year: 1998,
+        director: 'Whit Stillman',
+        imgUrl: '',
+        link: 'https://www.imdb.com/title/tt0120728/'
+    },
+    { 
+        title: '2001: A Space Odyssey',
+        year: 1968,
+        director: 'Stanley Kubrick',
+        imgUrl: '',
+        link: 'https://www.imdb.com/title/tt0062622/'
+    },
+    {
+        title: 'The Fly',
+        year: 1986,
+        director: 'David Cronenberg',
+        imgUrl: '',
+        link: 'https://www.imdb.com/title/tt0091064/'
+    },
+    {
+        title: 'La Strada',
+        year: 1954,
+        director: 'Federico Fellini',
+        imgUrl: '',
+        link: 'https://www.imdb.com/title/tt0047528/'
+    }
+];
+
+const FavoriteMovies: React.FC = () => {
+    return (
+      <div>
+        <h2 className="text-2xl font-semibold mb-4">Favorite Movies</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {favoriteFilms.map((movie, index) => (
+            <div key={index} className="border p-4 rounded-lg shadow">
+              <h3 className="text-lg font-semibold dark:text-white">{movie.title} ({movie.year})</h3>
+              <p className="text-gray-600 mb-2">{movie.director}</p>
+              {movie.imgUrl && (
+                <img src={movie.imgUrl} alt={`${movie.title} Poster`} className="max-h-40 mb-2" />
+              )}
+              {movie.link && (
+                <a
+                  href={movie.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 hover:underline"
+                >
+                  More Info
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+};
+
+// Books
+interface Book {
+    title: string;
+    author: string;
+}
+
+const favoriteBooks: Book[] = [
+    {
+        title: 'Crime and Punishment',
+        author: 'Fyodor Dostoevsky'
+    },
+    {
+        title: 'For Whom the Bell Tolls',
+        author: 'Ernest Hemingway'
+    },
+    {
+        title: 'Sometimes a Great Notion',
+        author: 'Ken Kesey'
+    },
+    {
+        title: 'I, Claudius',
+        author: 'Robert Graves'
+    },
+    {
+        title: 'Bonfire of the Vanities',
+        author: 'Tom Wolfe'
+    },
+    {
+        title: 'The Joke',
+        author: 'Milan Kundera'
+    },
+    {
+        title: 'The Amazing Adventures of Kavalier and Clay',
+        author: 'Michael Chabon'
+    },
+    {
+        title: 'The Good Earther',
+        author: 'Pearl S. Buck'
+    },
+    {
+        title: 'Barabbas',
+        author: 'Pär Lagerkvist'
+    },
+    {
+        title: 'Lady Chatterley\'s Lover',
+        author: 'D.H. Lawrence'
+    },
+    {
+        title: 'Lolita',
+        author: 'Vladimir Nabokov'
+    },
+    {
+        title: 'Brave New World',
+        author: 'Aldous Huxley'
+    }
+];
+
+const FavoriteBooks: React.FC = () => {
+    return (
+      <div>
+        <h2 className="text-2xl font-semibold mb-4">Favorite Books</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {favoriteBooks.map((book, index) => (
+            <div key={index} className="border p-4 rounded-lg shadow">
+              <h3 className="text-lg font-semibold">{book.title}</h3>
+              <p className="text-gray-600">By {book.author}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+};
+
+// Exercise
+
+
+const Interests = () => (
+    <div>
+        <FavoriteMovies />
+        <FavoriteBooks />
+    </div>
+);
+
+export default Interests;

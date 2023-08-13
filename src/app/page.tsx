@@ -3,6 +3,7 @@ import Resume from "./resume";
 import Intro from "./intro";
 import TabbedContent from "./tabbed_content";
 import Education from "./education";
+import Interests from "./interests";
 
 const tabs = [
   {
@@ -33,7 +34,7 @@ const tabs = [
   {
     id: 'hobbies_and_interests',
     label: 'Hobbies and Interests',
-    content: <></>
+    content: <Interests />
   },
 ]
 
