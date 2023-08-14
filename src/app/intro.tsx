@@ -24,15 +24,15 @@ const CompanyIconsRow: React.FC = () => {
     return (
       <div className="flex justify-center items-center space-x-4">
         {companies.map((company, index) => (
-                <a
-                    key={index}
-                    href={company.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:opacity-75 transition-opacity"
-                >
-                    {company.logo}
-                </a>
+            <a
+                key={index}
+                href={company.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-75 transition-opacity"
+            >
+                {company.logo}
+            </a>
         ))}
       </div>
     );
@@ -41,8 +41,8 @@ const CompanyIconsRow: React.FC = () => {
 const Intro: React.FC = () => {
     return (
         <div className="flex flex-col items-center justify-center h-full">
-            <h1 className="text-4xl font-semibold mb-2 text-center">Alexander Rodion Michaud</h1>
-            <p>or ARM, if you&apos;re in a hurry</p>
+            <h1 className="text-4xl font-semibold mb-1 text-center">Alexander Rodion Michaud</h1>
+            <p className='mb-2'>or ARM, if you&apos;re in a hurry</p>
             <div className='flex p-4 justify-between align-center flex-col sm:flex-row max-h-[600px] mt-6'>
                 <div className='sm:w-1/2'>
                     <img className="rounded-lg max-h-[100%]" src="https://imagedelivery.net/Xh-8qVol1Pftdals16ieKg/ccbbd565-53b4-4780-7fee-b4bcef64c100/public" alt="profile_pic" /> 
