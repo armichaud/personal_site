@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+    font-family: 'Amiri', serif;
+}
+
+h1, h2, h3, p {
+  @apply dark:text-white;
+}
+
+p.dark-grey {
+    @apply dark:text-gray-400;
+}

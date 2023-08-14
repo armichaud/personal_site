@@ -1,12 +1,41 @@
+import Projects from "./projects";
+import Resume from "./resume";
+import Intro from "./intro";
+import TabbedContent from "./tabbed_content";
+import Education from "./education";
+import Interests from "./interests";
+
+const tabs = [
+  {
+    id: 'me',
+    label: 'Me',
+    content: <Intro />
+  },
+  {
+    id: 'projects',
+    label: 'Projects',
+    content: <Projects />
+  },
+  {
+    id: 'resume',
+    label: 'Résumé',
+    content: <Resume />,
+  },
+  {
+    id: 'education',
+    label: 'Education',
+    content: <Education />
+  },
+  {
+    id: 'beyond_engineering',
+    label: 'Beyond Engineering',
+    content: <Interests />
+  },
+]
+
 const Home = (): JSX.Element => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <div className="flex flex-col items-center justify-center w-full lg:flex-row">
-          <p className="dark:text-white">Coming soon</p>  
-        </div> 
-      </div>
-    </main>
+    <TabbedContent tabs={tabs} />
   )
 };
 
