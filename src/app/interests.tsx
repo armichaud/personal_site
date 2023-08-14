@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const STATS_URL = 'https://api.chess.com/pub/player/magnanimus1994/stats';
+const STATS_URL = 'https://api.chess.com/pub/player/alexanderrodion/stats';
 
 // TODO Chess
 const getRatings = async () => {
