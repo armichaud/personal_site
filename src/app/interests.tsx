@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 
 const STATS_URL = 'https://api.chess.com/pub/player/alexanderrodion/stats';
 
-// TODO Chess
 const getRatings = async () => {
     const response = await fetch(STATS_URL);
     const data = await response.json();
@@ -40,8 +39,6 @@ const Chess = (): JSX.Element => {
 
     </div>
 )};
-
-// TODO Guitar
 
 interface Film {
     title: string;
