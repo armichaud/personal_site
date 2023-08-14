@@ -1,5 +1,6 @@
 const STATS_URL = 'https://api.chess.com/pub/player/magnanimus1994/stats';
 
+// TODO Chess
 const getRatings = async () => {
     const response = await fetch(STATS_URL);
     const data = await response.json();
@@ -7,9 +8,8 @@ const getRatings = async () => {
     return {rapid_rating, blitz_raiting};
 }
 
-// Chess
-// Guitar
-// Films
+
+// TODO Guitar
 
 interface Film {
     title: string;
