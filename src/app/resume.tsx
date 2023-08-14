@@ -21,7 +21,7 @@ const JobExperience: React.FC<JobExperienceProps> = ({
         <p className="text-gray-600 dark-grey">
             {startDate} - {endDate}
         </p>
-        <ul className="list-disc list-inside">
+        <ul className="list-inside">
             {bullets.map((bullet, index) => (
                 <li key={index}><p className="mt-2">{bullet}</p></li>
             ))}
@@ -32,7 +32,7 @@ const JobExperience: React.FC<JobExperienceProps> = ({
 
 const Resume = (): JSX.Element => {
   return (
-    <div className="container">
+    <div>
       <h1 className="text-2xl font-semibold mb-4">My Résumé</h1>
       <div>
         {RESUME_DATA.map((experience, index) => (

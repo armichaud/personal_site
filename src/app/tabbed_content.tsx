@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import ThemeToggle from './theme_toggle';
+import MenuIcon from '@mui/icons-material/Menu';
 
 type Tab = {
   id: string;
@@ -15,13 +16,19 @@ interface TabbedContentProps {
 
 const TabbedContent: React.FC<TabbedContentProps> = ({ tabs }) => {
   const [activeTab, setActiveTab] = useState(tabs[0].id);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleTabClick = (tabId: string) => {
     setActiveTab(tabId);
+    setMenuOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow dark:bg-gray-900">
+    <div className="bg-white p-4 dark:bg-gray-900">
       <div className="flex border-b border-gray-200">
         {tabs.map((tab) => (
           <button

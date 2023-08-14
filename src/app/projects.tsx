@@ -14,7 +14,7 @@ const PROJECTS: Project[] = [
     {
         title: 'Wedding Website',
         githubLink: 'https://github.com/alexandermichaud-drizly/wedding',
-        description: 'The website I built for our wedding',
+        description: 'The website I built for our wedding.',
         techStack: 'React, Typescript, SASS, Material UI, AWS App Runner',
         link: '/wedding'
     },
@@ -22,7 +22,7 @@ const PROJECTS: Project[] = [
         title: 'Wedding Guest RSVP API',
         githubLink: 'https://github.com/alexandermichaud-drizly/wedding-rsvp-serverless',
         techStack: 'Serverless, Express, Sequelize, AWS Lambda, AWS RDS',
-        description: 'A RESTful API I built to handle guest RSVPs and meal selections',
+        description: 'A RESTful API I built to handle guest RSVPs and meal selections.',
     },
 ];
 
