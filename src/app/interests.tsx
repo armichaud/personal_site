@@ -232,7 +232,7 @@ const FavoriteBooks: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {favoriteBooks.map((book, index) => (
             <div key={index} className="border p-4 rounded-lg shadow">
-              <h3 className="text-lg font-semibold dark:text-white">{book.title}</h3>
+              <h3 className="text-lg font-semibold">{book.title}</h3>
               <p className="text-gray-600">By {book.author}</p>
             </div>
           ))}

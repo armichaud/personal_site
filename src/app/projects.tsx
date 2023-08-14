@@ -33,7 +33,7 @@ const ProjectList: React.FC = () => {
             <ul className="space-y-4">
                 {PROJECTS.map((project, index) => (
                     <li key={index} className="border p-4 rounded-lg shadow">
-                        <h3 className="text-xl font-semibold mb-2 dark:text-white">
+                        <h3 className="text-xl font-semibold mb-2">
                             {project.title}
                         </h3>
                         <p className="text-gray-600 mb-2">{project.description}</p>
