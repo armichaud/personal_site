@@ -25,7 +25,7 @@ const Chess = (): JSX.Element => {
 
     return (
     <div className="flex flex-col mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Chess</h2> 
+        <h2 className="text-2xl font-semibold mb-4">Chess</h2>
         <div className="flex space-x-4">
             <div key="rapid" className="border p-4 rounded-lg shadow">
                 <h3 className="text-lg font-semibold">Bullet Rating</h3>
@@ -36,7 +36,9 @@ const Chess = (): JSX.Element => {
                 <p className="text-gray-600">{ratings.blitz_rating}</p>
             </div> 
         </div>
-
+        <h3 className="mt-4">
+            Play with me on chess.com: <a href="https://www.chess.com/member/alexanderrodion" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:underline">alexanderrodion</a>
+        </h3> 
     </div>
 )};
 
