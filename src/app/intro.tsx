@@ -61,7 +61,7 @@ const Intro: React.FC = () => {
                         <div className='flex flex-col justify-center mb-4'>
                             <h2 className="text-xl md:text-3xl font-semibold mb-1 text-center">What I&apos;m Doing In My Free Time</h2>
                             <p className='text-center'>
-                                Contributing to open source projects, learning Rust.
+                                Learning Rust & contributing to open source projects
                             </p>
                         </div>
                 </section>
