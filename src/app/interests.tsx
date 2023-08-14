@@ -143,7 +143,7 @@ const favoriteFilms: Film[] = [
 
 const FavoriteMovies: React.FC = () => {
     return (
-      <div>
+      <div className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">Favorite Movies</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {favoriteFilms.map((movie, index) => (
@@ -169,7 +169,6 @@ const FavoriteMovies: React.FC = () => {
     );
 };
 
-// Books
 interface Book {
     title: string;
     author: string;

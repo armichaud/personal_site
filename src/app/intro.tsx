@@ -48,18 +48,18 @@ const Intro: React.FC = () => {
                     <img className="rounded-lg max-h-[100%]" src="https://imagedelivery.net/Xh-8qVol1Pftdals16ieKg/ccbbd565-53b4-4780-7fee-b4bcef64c100/public" alt="profile_pic" /> 
                 </div>
                 <section className="p-6 sm:w-1/2 flex flex-col justify-around">
-                        <div className='flex flex-col justify-center mb-4'>
-                            <h2 className="sm:text-2xl md:text-3xl font-semibold mb-1 text-center ">Where I&apos;ve Worked</h2> 
+                        <div className='flex flex-col justify-center mb-4 sm:mb-6'>
+                            <h2 className="text-xl md:text-3xl font-semibold mb-1 text-center ">Where I&apos;ve Worked</h2> 
                             <CompanyIconsRow />
                         </div>
-                        <div className='flex flex-col justify-center mb-4'>
-                            <h2 className="sm:text-2xl md:text-3xl font-semibold mb-1 text-center">What I&apos;ve Worked With </h2>
+                        <div className='flex flex-col justify-center mb-4 sm:mb-6'>
+                            <h2 className="text-xl md:text-3xl font-semibold mb-1 text-center">What I&apos;ve Worked With </h2>
                             <p className='text-center'>
-                                Ruby on Rails, Node.js, TypeScript, JavaScript, PHP, Python
+                                Ruby on Rails, NextJS, TypeScript, PHP, Python
                             </p>
                         </div>
                         <div className='flex flex-col justify-center mb-4'>
-                            <h2 className="sm:text-2xl md:text-3xl font-semibold mb-1 text-center">What I&apos;m Doing In My Free Time</h2>
+                            <h2 className="text-xl md:text-3xl font-semibold mb-1 text-center">What I&apos;m Doing In My Free Time</h2>
                             <p className='text-center'>
                                 Contributing to open source projects, learning Rust.
                             </p>
