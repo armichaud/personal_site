@@ -1,13 +1,45 @@
+'use client'
+
+import { useEffect, useState } from "react";
+
 const STATS_URL = 'https://api.chess.com/pub/player/magnanimus1994/stats';
 
 // TODO Chess
 const getRatings = async () => {
     const response = await fetch(STATS_URL);
     const data = await response.json();
-    const {chess_rapid: {last: {rapid_rating}}, chess_blitz: {last: {blitz_raiting}} } = data;
-    return {rapid_rating, blitz_raiting};
+    console.log( { data } );
+    return [data?.chess_bullet?.last?.rating, data?.chess_blitz?.last?.rating];
 }
 
+const Chess = (): JSX.Element => {
+    const [ratings, setRatings] = useState({bullet_rating: 0, blitz_rating: 0});
+    useEffect(() => {
+        const fetchData = async () => {
+            const [bullet_rating, blitz_rating] = await getRatings();
+            setRatings({ bullet_rating, blitz_rating });
+            console.log( { bullet_rating, blitz_rating } );
+        };
+
+        fetchData();
+    }, []);
+
+    return (
+    <div className="flex flex-col mb-12">
+        <h2 className="text-2xl font-semibold mb-4">Chess</h2> 
+        <div className="flex space-x-4">
+            <div key="rapid" className="border p-4 rounded-lg shadow">
+                <h3 className="text-lg font-semibold">Bullet Rating</h3>
+                <p className="text-gray-600">{ratings.bullet_rating}</p>
+            </div>
+            <div key="blitz" className="border p-4 rounded-lg shadow">
+                <h3 className="text-lg font-semibold">Blitz Rating</h3>
+                <p className="text-gray-600">{ratings.blitz_rating}</p>
+            </div> 
+        </div>
+
+    </div>
+)};
 
 // TODO Guitar
 
@@ -246,6 +278,7 @@ const FavoriteBooks: React.FC = () => {
 
 const Interests = () => (
     <div>
+        <Chess />
         <FavoriteMovies />
         <FavoriteBooks />
     </div>
