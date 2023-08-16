@@ -6,7 +6,7 @@ html {
     font-family: 'Amiri', serif;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, h4, p {
   @apply dark:text-white;
 }
 

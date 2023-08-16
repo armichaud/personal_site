@@ -4,6 +4,37 @@ import { useEffect, useState } from "react";
 
 const STATS_URL = 'https://api.chess.com/pub/player/alexanderrodion/stats';
 
+const Yale = (): JSX.Element => (
+    <div className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4">Alumni Service</h2>
+        <div className="flex flex-col p-4 border rounded-md shadow-md mb-4">
+            <h3 className="text-lg font-semibold underline">The Yale Club of Boston</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2">
+                <div className="my-2">
+                    <h4 className="text-lg font-semibold pl-4">President</h4>
+                    <p className="text-gray-600 pl-4">2022 - 2023</p>
+                </div>
+                <div className="my-2">
+                    <h4 className="text-lg font-semibold pl-4">Vice President</h4>
+                    <p className="text-gray-600 pl-4">2021 - 2022</p>
+                </div>
+                <div className="my-3">
+                    <h4 className="text-lg font-semibold pl-4">Secretary</h4>
+                    <p className="text-gray-600 pl-4">2019 - 2022</p>
+                </div>
+                <div className="my-2">
+                    <h4 className="text-lg font-semibold pl-4">Head of Communications</h4>
+                    <p className="text-gray-600 pl-4">2020 - 2023</p>
+                </div>
+                <div className="my-2">
+                    <h4 className="text-lg font-semibold pl-4">Board Member</h4>
+                    <p className="text-gray-600 pl-4">2019 - Present</p>
+                </div>
+            </div>
+        </div>
+    </div>
+);
+
 const getRatings = async () => {
     const response = await fetch(STATS_URL);
     const data = await response.json();
@@ -272,12 +303,11 @@ const FavoriteBooks: React.FC = () => {
     );
 };
 
-// Exercise
-
 
 const Interests = () => (
     <div>
         <Chess />
+        <Yale />
         <FavoriteMovies />
         <FavoriteBooks />
     </div>
