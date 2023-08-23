@@ -24,6 +24,12 @@ const PROJECTS: Project[] = [
         techStack: 'Serverless, Express, Sequelize, AWS Lambda, AWS RDS',
         description: 'A RESTful API I built to handle guest RSVPs and meal selections.',
     },
+    {
+        title: 'Chicken Esolang Interpreter',
+        githubLink: 'https://github.com/armichaud/chicken_esolang',
+        techStack: 'Rust',
+        description: 'An interpreter for the Chicken esoteric programming language.',
+    }
 ];
 
 const ProjectList: React.FC = () => {
