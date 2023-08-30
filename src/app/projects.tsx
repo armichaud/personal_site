@@ -8,9 +8,17 @@ interface Project {
     description: string;
     techStack: string;
     link?: string;
+    crate?: string;
 }
 
 const PROJECTS: Project[] = [
+    {
+        title: 'Chicken Esolang Interpreter',
+        githubLink: 'https://github.com/armichaud/chicken_esolang',
+        techStack: 'Rust',
+        description: 'An interpreter for the Chicken esoteric programming language.',
+        crate: 'https://crates.io/crates/chicken_esolang'
+    },
     {
         title: 'Wedding Website',
         githubLink: 'https://github.com/alexandermichaud-drizly/wedding',
@@ -25,11 +33,11 @@ const PROJECTS: Project[] = [
         description: 'A RESTful API I built to handle guest RSVPs and meal selections.',
     },
     {
-        title: 'Chicken Esolang Interpreter',
-        githubLink: 'https://github.com/armichaud/chicken_esolang',
-        techStack: 'Rust',
-        description: 'An interpreter for the Chicken esoteric programming language.',
-    }
+        title: 'alexandermichaud.tech',
+        githubLink: 'https://github.com/armichaud/personal_site',
+        techStack: 'React, Typescript, NextJS, TailwindCSS, Vercel',
+        description: 'The site you\'re currently viewing.',
+    },
 ];
 
 const ProjectList: React.FC = () => {
@@ -64,6 +72,16 @@ const ProjectList: React.FC = () => {
                                     className="text-orange-500 hover:underline"
                                 >
                                     View the project
+                                </a>
+                            )}
+                            {project.crate && (
+                                <a 
+                                    href={project.link} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="text-orange-500 hover:underline"
+                                >
+                                    See the crate on crates.io
                                 </a>
                             )}
                         </div>
