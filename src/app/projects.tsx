@@ -76,7 +76,7 @@ const ProjectList: React.FC = () => {
                             )}
                             {project.crate && (
                                 <a 
-                                    href={project.link} 
+                                    href={project.crate} 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
                                     className="text-orange-500 hover:underline"
