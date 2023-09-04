@@ -1,5 +1,7 @@
 'use client'
 
+import { ApolloProvider, useQuery } from '@apollo/client';
+import client, { GET_CONTRIBUTIONS } from './apollo';
 import React from 'react';
 
 interface Project {
@@ -41,6 +43,8 @@ const PROJECTS: Project[] = [
 ];
 
 const ProjectList: React.FC = () => {
+    useQuery(GET_CONTRIBUTIONS, {});
+
     return (
         <div>
             <h2 className="text-2xl font-semibold mb-4">Projects</h2>
@@ -93,6 +97,13 @@ const ProjectList: React.FC = () => {
     );
 };
   
-export default ProjectList;
+
+const ProjectListWithApollo = () => (
+    <ApolloProvider client={client}>
+        <ProjectList />
+    </ApolloProvider>
+);
+
+export default ProjectListWithApollo;
 
   
