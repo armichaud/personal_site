@@ -11,10 +11,10 @@ const client = new ApolloClient({
 });
 
 const basicAuthLink = setContext((_, { headers }) => {
-    const username = 'armichaud';
-    const password = process.env.GITHUB_AUTH_TOKEN;
+    const token = process.env.GITHUB_AUTH_TOKEN;
+    console.log(token);
   
-    const basicAuth = btoa(`${username}:${password}`);
+    const basicAuth = btoa(`armichaud:${token}`);
   
     return {
       headers: {
