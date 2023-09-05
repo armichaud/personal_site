@@ -1,5 +1,3 @@
-'use client'
-
 import { ApolloProvider, useQuery } from '@apollo/client';
 import client, { GET_CONTRIBUTIONS } from './apollo';
 import React from 'react';
@@ -115,12 +113,12 @@ const ProjectList: React.FC = () => {
                 ))}
             </ul>
             <h2 className="text-2xl font-semibold mt-8 mb-2">Open Source Contributions</h2>
-            <div className='mb-4'>
+            <p className='mb-4'>
                 {openSourceRepos ? 
                     "I'm accumulating open source karma! Below you'll find links to the PRs that I've merged into public projects, organized by repository. The list is fetched programmatically using the GitHub GraphQL API." :
                     "This is where my list of merged open source PRs would appear, but it looks like there was an issue fetching them from GitHub."
                 }
-            </div>
+            </p>
             {openSourceRepos && openSourceRepos.map((repo, index) => (
                 <a 
                     className="text-orange-500 hover:underline mb-2"
