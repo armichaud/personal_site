@@ -17,6 +17,10 @@ const nextConfig = {
             },
           },
         });
+
+        config.plugins.push(new webpack.DefinePlugin({
+          'process.env.GITHUB_AUTH_TOKEN': JSON.stringify(process.env.GITHUB_AUTH_TOKEN),
+        }))
     
         return config;
     },
