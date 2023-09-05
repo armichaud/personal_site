@@ -1,3 +1,5 @@
+'use client'
+
 import { ApolloProvider, useQuery } from '@apollo/client';
 import client, { GET_CONTRIBUTIONS } from './apollo';
 import React from 'react';
