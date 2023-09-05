@@ -12,7 +12,7 @@ const client = new ApolloClient({
 
 const basicAuthLink = setContext((_, { headers }) => {
     const username = 'armichaud';
-    const password = process.env.GITHUB_AUTH_KEY;
+    const password = process.env.GITHUB_AUTH_TOKEN;
   
     const basicAuth = btoa(`${username}:${password}`);
   
@@ -30,14 +30,9 @@ export const GET_CONTRIBUTIONS = gql`
     query {
         user(login: "armichaud") {
             contributionsCollection {
-                pullRequestContributions(first: 100) {
-                totalCount
-                nodes {
-                    pullRequest {
-                            repository {
-                                nameWithOwner
-                            }
-                        }
+                commitContributionsByRepository(maxRepositories: 100) {
+                    repository {
+                        nameWithOwner
                     }
                 }
             }

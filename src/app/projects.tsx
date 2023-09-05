@@ -42,8 +42,30 @@ const PROJECTS: Project[] = [
     },
 ];
 
+interface ContributionData {
+    user: {
+        contributionsCollection: {
+            commitContributionsByRepository: Array<{
+                repository: {
+                    nameWithOwner: string;
+                }
+            }>
+        }
+    }
+}
+const parseContributionData = (data: ContributionData): Array<string> => {
+    const contributions = data?.user?.contributionsCollection?.commitContributionsByRepository;
+    return contributions
+        ?.filter((contribution) => !contribution?.repository?.nameWithOwner?.includes('armichaud'))
+        ?.map((contribution) => contribution?.repository?.nameWithOwner);
+};
+
 const ProjectList: React.FC = () => {
-    useQuery(GET_CONTRIBUTIONS, {});
+    // TODO Use loading
+    // TODO Parse errors
+    const { data } = useQuery(GET_CONTRIBUTIONS);
+
+    const openSourceRepos = parseContributionData(data);
 
     return (
         <div>
@@ -93,6 +115,16 @@ const ProjectList: React.FC = () => {
                     </li>
                 ))}
             </ul>
+            <h2 className="text-2xl font-semibold my-4">Open Source Contributions</h2>
+            {openSourceRepos.map((repo, index) => (
+                <a 
+                    className="text-orange-500 hover:underline"
+                    key={index} 
+                    href={`https://github.com/${repo}`}
+                >
+                    {repo}
+                </a>
+            ))}
         </div>
     );
 };
