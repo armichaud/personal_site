@@ -49,20 +49,21 @@ const Intro: React.FC = () => {
                 </div>
                 <section className="p-6 sm:w-1/2 flex flex-col justify-around mt-12 sm:mt-0">
                     <div className='flex flex-col justify-center mb-14 sm:mb-6'>
-                        <h2 className="text-xl text-3xl font-semibold mb-1 text-center ">Where I&apos;ve Worked</h2> 
+                        <h2 className="text-3xl font-semibold mb-1 text-center ">Where I&apos;ve Worked</h2> 
                         <CompanyIconsRow />
                     </div>
                     <div className='flex flex-col justify-center mb-14 sm:mb-6'>
-                        <h2 className="text-xl text-3xl font-semibold mb-1 text-center">What I&apos;ve Worked With </h2>
+                        <h2 className="text-3xl font-semibold mb-1 text-center">What I&apos;ve Worked With Professionally</h2>
                         <p className='text-center'>
-                            Ruby on Rails, NextJS, TypeScript, PHP, Python
+                            Ruby on Rails, NextJS, TypeScript, Redux, PHP
                         </p>
                     </div>
                     <div className='flex flex-col justify-center mb-14 sm:mb-4'>
-                        <h2 className="text-xl text-3xl font-semibold mb-1 text-center">What I&apos;m Doing In My Free Time</h2>
+                        <h2 className="text-3xl font-semibold mb-1 text-center">What I&apos;m Doing In My Free Time</h2>
                         <p className='text-center'>
-                            Building things in Rust & contributing to open source projects
+                            Building things in Rust and contributing to open source software.
                         </p>
+                        <p className='text-center'>Check out the projects tab for more details!</p>
                     </div>
                 </section>
             </div>

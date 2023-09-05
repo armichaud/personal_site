@@ -37,7 +37,7 @@ const PROJECTS: Project[] = [
     {
         title: 'alexandermichaud.tech',
         githubLink: 'https://github.com/armichaud/personal_site',
-        techStack: 'React, Typescript, NextJS, TailwindCSS, Vercel',
+        techStack: 'React, Typescript, Vercel (NextJS), TailwindCSS, Apollo Client (GraphQL)',
         description: 'The site you\'re currently viewing.',
     },
 ];
@@ -115,12 +115,15 @@ const ProjectList: React.FC = () => {
                     </li>
                 ))}
             </ul>
-            <h2 className="text-2xl font-semibold my-4">Open Source Contributions</h2>
-            {openSourceRepos.map((repo, index) => (
+            <h2 className="text-2xl font-semibold mt-8 mb-2">Open Source Contributions</h2>
+            <div className='mb-4'>
+                I&apos;m accumulating open source karma! Below you'll find links to the PRs that I've merged into public projects, organized by repository. The list is fetched programmatically using the GitHub GraphQL API.
+            </div>
+            {openSourceRepos && openSourceRepos.map((repo, index) => (
                 <a 
-                    className="text-orange-500 hover:underline"
+                    className="text-orange-500 hover:underline mb-2"
                     key={index} 
-                    href={`https://github.com/${repo}`}
+                    href={`https://github.com/${repo}/pulls?q=is%3Apr+is%3Aclosed+author%3Aarmichaud`}
                 >
                     {repo}
                 </a>
