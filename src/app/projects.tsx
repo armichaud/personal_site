@@ -1,8 +1,47 @@
 'use client'
 
 import { ApolloProvider, useQuery } from '@apollo/client';
-import client, { GET_CONTRIBUTIONS } from './apollo';
+import { ApolloClient, InMemoryCache, HttpLink, gql } from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 import React from 'react';
+
+const httpLink = new HttpLink({
+  uri: 'https://api.github.com/graphql',
+});
+
+const client = new ApolloClient({
+  link: httpLink,
+  cache: new InMemoryCache(),
+});
+
+const basicAuthLink = setContext((_, { headers }) => {
+    const token = process.env.GITHUB_AUTH_TOKEN;
+  
+    const basicAuth = btoa(`armichaud:${token}`);
+  
+    return {
+      headers: {
+        ...headers,
+        Authorization: `Basic ${basicAuth}`,
+      },
+    };
+});
+
+client.setLink(basicAuthLink.concat(httpLink));
+
+const GET_CONTRIBUTIONS = gql`
+    query {
+        user(login: "armichaud") {
+            contributionsCollection {
+                commitContributionsByRepository(maxRepositories: 100) {
+                    repository {
+                        nameWithOwner
+                    }
+                }
+            }
+        }
+    }
+`
 
 interface Project {
     title: string;
