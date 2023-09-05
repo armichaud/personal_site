@@ -62,7 +62,6 @@ const parseContributionData = (data: ContributionData): Array<string> => {
 
 const ProjectList: React.FC = () => {
     // TODO Use loading
-    // TODO Parse errors
     const { data } = useQuery(GET_CONTRIBUTIONS);
 
     const openSourceRepos = parseContributionData(data);
@@ -117,7 +116,10 @@ const ProjectList: React.FC = () => {
             </ul>
             <h2 className="text-2xl font-semibold mt-8 mb-2">Open Source Contributions</h2>
             <div className='mb-4'>
-                I&apos;m accumulating open source karma! Below you'll find links to the PRs that I've merged into public projects, organized by repository. The list is fetched programmatically using the GitHub GraphQL API.
+                {openSourceRepos ? 
+                    "I'm accumulating open source karma! Below you'll find links to the PRs that I've merged into public projects, organized by repository. The list is fetched programmatically using the GitHub GraphQL API." :
+                    "This is where my list of merged open source PRs would appear, but it looks like there was an issue fetching them from GitHub."
+                }
             </div>
             {openSourceRepos && openSourceRepos.map((repo, index) => (
                 <a 
