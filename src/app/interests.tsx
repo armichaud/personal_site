@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from "react";
+import Loading from "./loading";
 
 const STATS_URL = 'https://api.chess.com/pub/player/alexanderrodion/stats';
 
@@ -60,11 +61,11 @@ const Chess = (): JSX.Element => {
         <div className="flex space-x-4">
             <div key="rapid" className="border p-4 rounded-lg shadow">
                 <h3 className="text-lg font-semibold">Bullet Rating</h3>
-                <p className="text-gray-600">{ratings.bullet_rating}</p>
+                {ratings.bullet_rating ? <p className="text-gray-600">{ratings.bullet_rating}</p> : <Loading size={20} />}
             </div>
             <div key="blitz" className="border p-4 rounded-lg shadow">
                 <h3 className="text-lg font-semibold">Blitz Rating</h3>
-                <p className="text-gray-600">{ratings.blitz_rating}</p>
+                {ratings.blitz_rating ? <p className="text-gray-600">{ratings.blitz_rating}</p> : <Loading size={20} />}
             </div> 
         </div>
         <h3 className="mt-4">
