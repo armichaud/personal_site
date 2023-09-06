@@ -21,7 +21,7 @@ const RESUME_DATA: JobExperienceProps[] = [
         "Built landing page for the announcement of Uber's acquisition of Drizly, viewed by millions of Uber notifications subscribers.",
         "Scoped and engineered sensitive changes to Drizly’s payments API required to fulfill a class action lawsuit settlement, applying credits to 260k+ beneficiaries’ carts at checkout.",
         "Redesigned drizly.com/sign_up and drizly.com/login as SPAs, integrating social login options to increase account creation.",
-        "Built Drizly’s gift recommendation quiz in order to query our catalog database based on user’s gifting preferences.",
+        "Built Drizly’s gift recommendation quiz to query our catalog database based on users’ gifting preferences.",
         "Implemented Google Analytics clickstream tracking, Iterable event tracking, and A/B test bucketing to assist marketing and BI in driving revenue growth through data insights.",
         "Refactored business logic from Ruby into Typescript as part of an ongoing initiative to move Rails back-end into server-side NextJS."
       ],
