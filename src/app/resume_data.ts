@@ -22,7 +22,7 @@ const RESUME_DATA: JobExperienceProps[] = [
         "Scoped and engineered sensitive changes to Drizly’s payments API required to fulfill a class action lawsuit settlement, applying credits to 260k+ beneficiaries’ carts at checkout.",
         "Redesigned drizly.com/sign_up and drizly.com/login as SPAs, integrating social login options to increase account creation.",
         "Built Drizly’s gift recommendation quiz in order to query our catalog database based on user’s gifting preferences.",
-        "Implemented Google Analytics clickstream tracking, Iterable event market event tracking, and A/B test bucketing to assist marketing and BI in driving revenue growth through data insights.",
+        "Implemented Google Analytics clickstream tracking, Iterable event tracking, and A/B test bucketing to assist marketing and BI in driving revenue growth through data insights.",
         "Refactored business logic from Ruby into Typescript as part of an ongoing initiative to move Rails back-end into server-side NextJS."
       ],
     },
@@ -57,7 +57,7 @@ const RESUME_DATA: JobExperienceProps[] = [
       ],
     },
     {
-      jobTitle: "Data Engineer",
+      jobTitle: "Back End Software Engineer",
       company: "Wayfair",
       startDate: "May 2018",
       endDate: "Feb 2019",
