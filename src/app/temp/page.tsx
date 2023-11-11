@@ -37,12 +37,8 @@ const StarsField = () => {
 
         const animate = () => {
             requestAnimationFrame(animate);
-
-            // Update camera position based on mouse movement
-            const target = new THREE.Vector3(mouse.x * 10, mouse.y * 10, 0);
+            const target = new THREE.Vector3(mouse.x * 100, mouse.y * 100, 0);
             camera.position.lerp(target, 0.05);
-            camera.lookAt(scene.position);
-
             renderer.render(scene, camera);
         };
 
