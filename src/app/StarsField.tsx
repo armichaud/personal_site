@@ -1,9 +1,13 @@
 "use client"
 
-import { MutableRefObject, useEffect, useRef } from 'react';
+import { MutableRefObject, useEffect, useRef, ReactNode } from 'react';
 import * as THREE from 'three';
 
-const StarsField = () => {
+type StarsFieldProps = {
+  children: ReactNode;
+};
+
+const StarsField = ({ children }: StarsFieldProps) => {
   const containerRef = useRef<any>(null);
 
   useEffect(() => {
@@ -55,6 +59,7 @@ const StarsField = () => {
         };
 
         window.addEventListener('resize', handleResize);
+        window.addEventListener('tabChanged', handleResize);
 
         // Clean up event listeners on component unmount
         return () => {
@@ -63,7 +68,14 @@ const StarsField = () => {
     }
   }, []); // Empty dependency array ensures useEffect runs once on mount
 
-  return <div ref={containerRef} />;
+  return (
+    <div className="relative w-full h-full" >
+      <div className="invisible dark:visible w-full h-full z-[-1]" ref={containerRef} />
+      <div className="absolute top-0 left-0 w-full h-full z-10">
+        {children}
+      </div>
+    </div>
+  );
 };
 
 export default StarsField;
