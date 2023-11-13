@@ -41,8 +41,8 @@ const StarsField = ({ children }: StarsFieldProps) => {
 
         window.addEventListener('deviceorientation', (event: DeviceOrientationEvent) => {
           if (event.beta !== null && event.gamma !== null) {
-            mouse.x = (event.beta / 180) * 2 - 1;
-            mouse.y = -(event.gamma / 90) * 2 + 1;
+            mouse.x = -(event.gamma / 90) * 2 + 1;
+            mouse.y = (event.beta / 180) * 2 - 1;
           }
         });
 
