@@ -39,6 +39,13 @@ const StarsField = ({ children }: StarsFieldProps) => {
           mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
         });
 
+        window.addEventListener('deviceorientation', (event: DeviceOrientationEvent) => {
+          if (event.beta !== null && event.gamma !== null) {
+            mouse.x = (event.beta / 180) * 2 - 1;
+            mouse.y = -(event.gamma / 90) * 2 + 1;
+          }
+        });
+
         const animate = () => {
             requestAnimationFrame(animate);
             const target = new THREE.Vector3(mouse.x * 100, mouse.y * 100, 0);
