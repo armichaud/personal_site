@@ -37,16 +37,16 @@ const TabbedContent: React.FC<TabbedContentProps> = ({ tabs }) => {
   return (
     <StarsField>
       <div className="p-4">
-        <div className='sm:hidden flex'>
+        <div id="mobileMenu" className='sm:hidden flex'>
           <button
               onClick={toggleMenu}
               className="text-gray-600 hover:text-gray-800 focus:outline-none"
           >
             <MenuIcon />
           </button>
-          <ThemeToggle />
+          <ThemeToggle mobile={true}/>
         </div>
-        <div className="hidden sm:flex border-b border-gray-200">
+        <div id="desktopMenu" className="hidden sm:flex border-b border-gray-200">
           {tabs.map((tab) => (
             <button
               key={tab.id}
