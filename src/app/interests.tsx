@@ -39,7 +39,6 @@ const Yale = (): JSX.Element => (
 const getRatings = async () => {
     const response = await fetch(STATS_URL);
     const data = await response.json();
-    console.log( { data } );
     return [data?.chess_bullet?.last?.rating, data?.chess_blitz?.last?.rating];
 }
 
@@ -49,7 +48,6 @@ const Chess = (): JSX.Element => {
         const fetchData = async () => {
             const [bullet_rating, blitz_rating] = await getRatings();
             setRatings({ bullet_rating, blitz_rating });
-            console.log( { bullet_rating, blitz_rating } );
         };
 
         fetchData();
