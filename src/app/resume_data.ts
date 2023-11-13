@@ -2,12 +2,14 @@ import { JobExperienceProps } from "./resume";
 
 const RESUME_DATA: JobExperienceProps[] = [
     {
-      jobTitle: "Mobile Apps Engineer",
+      jobTitle: "Android Engineer",
       company: "Drizly",
       startDate: "Sep 2023",
       endDate: "Present",
       bullets: [
-        "Recently joined feature development teams for Drizly’s iOS and Android applications. Currently implementing a Scrivito-based CMS for iOS catalog collection pages."
+        "Recently joined feature development teams for Drizly’s Android applications. Coding in Kotlin and Java, leveraging MVVM architecture with Jetpack Compose and legacy XML layouts.",
+        "Enabled deeplinking to user 'registries' as part of an initiative to support shareable product lists.", 
+        "Currently implementing a Scrivito-based CMS for themed catalog groupings."
       ] 
     },
     {
