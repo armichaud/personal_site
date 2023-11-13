@@ -1,6 +1,6 @@
 "use client"
 
-import { MutableRefObject, useEffect, useRef, ReactNode } from 'react';
+import { useEffect, useRef, ReactNode } from 'react';
 import * as THREE from 'three';
 
 type StarsFieldProps = {
@@ -70,7 +70,7 @@ const StarsField = ({ children }: StarsFieldProps) => {
 
   return (
     <div className="relative w-full h-full" >
-      <div className="invisible dark:visible w-full h-full z-[-1]" ref={containerRef} />
+      <div className="fixed invisible dark:visible w-full h-full z-[-1]" ref={containerRef} />
       <div className="absolute top-0 left-0 w-full h-full z-10">
         {children}
       </div>
