@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri"></link>
         <SchemaMarkup />
       </head>
