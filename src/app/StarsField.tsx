@@ -7,6 +7,9 @@ type StarsFieldProps = {
   children: ReactNode;
 };
 
+// Ensure that the stars field is larger than the screen to avoid exposing border on mobile
+const DIMENSION_MULTIPLIER = 1.5;
+
 const StarsField = ({ children }: StarsFieldProps) => {
   const containerRef = useRef<any>(null);
 
@@ -15,7 +18,7 @@ const StarsField = ({ children }: StarsFieldProps) => {
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.outerWidth / window.outerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.outerWidth * 2, window.outerHeight * 2);
+        renderer.setSize(window.outerWidth * DIMENSION_MULTIPLIER, window.outerHeight * DIMENSION_MULTIPLIER);
         containerRef?.current?.appendChild(renderer.domElement);
 
         const starsGeometry = new THREE.BufferGeometry();
@@ -62,7 +65,7 @@ const StarsField = ({ children }: StarsFieldProps) => {
             camera.aspect = newWidth / newHeight;
             camera.updateProjectionMatrix();
 
-            renderer.setSize(newWidth * 2, newHeight * 2);
+            renderer.setSize(newWidth * DIMENSION_MULTIPLIER, newHeight * DIMENSION_MULTIPLIER);
         };
 
         window.addEventListener('resize', handleResize);
