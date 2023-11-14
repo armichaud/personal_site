@@ -76,9 +76,9 @@ const StarsField = ({ children }: StarsFieldProps) => {
   }, []);
 
   return (
-    <div className="relative w-full h-full" >
-      <div className="fixed invisible dark:visible w-full h-full z-[-1]" style={{ WebkitBackfaceVisibility: 'hidden' }} ref={containerRef} />
-      <div className="absolute top-0 left-0 w-full h-full z-10">
+    <div className="relative w-screen h-screen" >
+      <div className="fixed invisible dark:visible w-screen h-screen z-[-1]" style={{ WebkitBackfaceVisibility: 'hidden' }} ref={containerRef} />
+      <div className="absolute top-0 left-0 w-screen h-screen z-10">
         {children}
       </div>
     </div>
