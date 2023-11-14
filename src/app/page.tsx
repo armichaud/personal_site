@@ -33,10 +33,6 @@ const tabs = [
   },
 ]
 
-const Home = (): JSX.Element => {
-  return (
-    <TabbedContent tabs={tabs} />
-  )
-};
+const Home = (): JSX.Element => <TabbedContent tabs={tabs} />;
 
 export default Home;
