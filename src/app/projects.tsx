@@ -74,7 +74,7 @@ const PROJECTS: Project[] = [
     {
         title: 'alexandermichaud.tech',
         githubLink: 'https://github.com/armichaud/personal_site',
-        techStack: 'React, Typescript, Vercel (NextJS), TailwindCSS, Apollo Client (GraphQL)',
+        techStack: 'React, Typescript, Vercel (NextJS), ThreeJS, TailwindCSS, Apollo Client (GraphQL)',
         description: 'The site you\'re currently viewing.',
     },
 ];
