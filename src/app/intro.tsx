@@ -54,7 +54,7 @@ const Intro: React.FC = () => {
                     </div>
                     <div className='flex flex-col justify-center mb-14 sm:mb-6'>
                         <h2 className="text-2xl lg:text-3xl font-bold mb-1 text-center">What I&apos;ve Worked On</h2>
-                        <p className='text-center'>Present: Android Development with Kotlin, Java</p>
+                        <p className='text-center'>Present: Kotlin Development for Android</p>
                         <p className='text-center'>
                             Past: Web Development with NextJS, Ruby on Rails, PHP
                         </p>
