@@ -52,6 +52,12 @@ interface Project {
 
 const PROJECTS: Project[] = [
     {
+        title: 'To Do List',
+        githubLink: 'https://github.com/armichaud/android_to_do_list_app',
+        techStack: 'Kotlin, Android, Jetpack Compose, Room Database, Splash API',
+        description: 'A to-do list app for Android',
+    },
+    {
         title: 'Chicken Esolang Interpreter',
         githubLink: 'https://github.com/armichaud/chicken_esolang',
         techStack: 'Rust',
