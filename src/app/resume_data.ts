@@ -7,9 +7,9 @@ const RESUME_DATA: JobExperienceProps[] = [
       startDate: "Sep 2023",
       endDate: "Present",
       bullets: [
-        "Recently joined feature development teams for Drizly’s Android applications. Coding in Kotlin and Java, leveraging MVVM architecture with Jetpack Compose and legacy XML layouts.",
-        "Enabled deeplinking to user 'registries' as part of an initiative to support shareable product lists.", 
-        "Currently implementing a Scrivito-based CMS for themed catalog groupings."
+        "Programming in Kotlin & Java according to MVVM design pattern.", 
+        "Developed pages entirely configurable via content management services, in order to empower marketers to build and instantly deploy  themed / seasonal product and brand collections.", 
+        "Built shareable 'registry' pages to promote gift purchasing and spotlight partner-sponsored products.",
       ] 
     },
     {
