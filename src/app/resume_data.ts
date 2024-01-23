@@ -7,9 +7,10 @@ const RESUME_DATA: JobExperienceProps[] = [
       startDate: "Sep 2023",
       endDate: "Present",
       bullets: [
-        "Programming in Kotlin & Java according to MVVM design pattern.", 
-        "Developed pages entirely configurable via content management services, in order to empower marketers to build and instantly deploy  themed / seasonal product and brand collections.", 
-        "Built shareable 'registry' pages to promote gift purchasing and spotlight partner-sponsored products.",
+        "Learned Kotlin/Java on the job to become 1 of 3 Drizly Android developers, working to achieve feature parity with browser and iOS versions of the Drizly app experience.",
+        "Architected and implemented pages entirely configurable via content management services, empowering marketers to build and instantly deploy themed/seasonal product and brand collections to Drizly’s Android app.",
+        "Built shareable “registry” pages to promote gift purchases and spotlight sponsored products.",
+        "Enabled in-app banners to serve promotions fetched from Drizly API."
       ] 
     },
     {
