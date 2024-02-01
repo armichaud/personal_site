@@ -305,7 +305,6 @@ const FavoriteBooks: React.FC = () => {
 
 const Interests = () => (
     <div>
-        <Chess />
         <Yale />
         <FavoriteMovies />
         <FavoriteBooks />
