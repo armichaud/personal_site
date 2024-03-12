@@ -83,18 +83,6 @@ const schema = [
         "applicationCategory": "Web Development",
         "datePublished": "2023-09-01",
         "programmingLanguage": "Serverless, Express, Sequelize"
-    },
-    {
-        "@context": "http://schema.org",
-        "@type": "JobPosting",
-        "title": "Full Stack Software Engineer",
-        "description": "Working as a Full Stack Software Engineer at Drizly.",
-        "datePosted": "2021-03-01",
-        "hiringOrganization": {
-        "@type": "Organization",
-            "name": "Drizly",
-            "url": "https://www.drizly.com"
-        }
     }
 ];
 
