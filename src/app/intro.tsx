@@ -57,17 +57,15 @@ const Intro: React.FC = () => {
                         <h2 className="text-2xl lg:text-3xl font-bold mb-1 text-center ">Where I&apos;ve Worked</h2> 
                         <CompanyIconsRow />
                     </div>
-                    <div className='flex flex-col justify-center mb-14 sm:mb-6'>
-                        <h2 className="text-2xl lg:text-3xl font-bold mb-1 text-center">What I&apos;ve Worked On</h2>
-                        <p className='text-center'>Present: Kotlin Development for Android</p>
+                    <div className='flex flex-col justify-center mb-14 sm:mb-4'>
+                        <h2 className="text-2xl lg:text-3xl font-bold mb-1 text-center">What I&apos;ve Done</h2>
                         <p className='text-center'>
-                            Past: Web Development with NextJS, Ruby on Rails, PHP
+                          Developed apps for the web (NextJS, Ruby on Rails, PHP) and Android (Java/Kotlin). 
                         </p>
                     </div>
-                    <div className='flex flex-col justify-center mb-14 sm:mb-4'>
-                        <h2 className="text-2xl lg:text-3xl font-bold mb-1 text-center">What I&apos;m Doing In My Free Time</h2>
-                        <p className='text-center'>
-                            Experimenting with Jetpack Compose for Android and making quirky things in Rust. Check out the projects tab for more details!</p>
+                    <div className='flex flex-col justify-center mb-14 sm:mb-6'>
+                        <h2 className="text-2xl lg:text-3xl font-bold mb-1 text-center">What I&apos;m Doing Now</h2>
+                        <p className='text-center'>Using Python-based compliance tools to ensuring Capital One's AWS resources comply with safety standards</p>
                     </div>
                 </section>
             </div>
