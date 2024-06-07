@@ -5,6 +5,11 @@ import React from 'react';
 const CompanyIconsRow: React.FC = () => {
     const companies = [
       {
+        name: "Capital One",
+        logo: <img className="max-h-24 w-24" src="https://tbcdn.talentbrew.com/company/234/gst_v1_0/img/logo-capital-one.svg" alt="c1"/>,
+        website: "https://www.capitalone.com",
+      },
+      {
         name: "Drizly",
         logo: <img className="max-h-24" src="https://imagedelivery.net/Xh-8qVol1Pftdals16ieKg/7698f546-d965-4a5d-e766-2200beb85100/public" alt="drizly"></img>,
         website: "https://www.drizly.com",
