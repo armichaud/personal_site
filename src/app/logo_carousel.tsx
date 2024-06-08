@@ -24,51 +24,59 @@ const companies = [
   ];
 
 const LogoCarousel = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
     const carouselRef = useRef(null);
-    const allCompanies = [...companies, ...companies]
+  
+    const allCompanies = [...companies, ...companies];
   
     useEffect(() => {
-      const interval = setInterval(() => {
-        if (!isPaused) {
-          setCurrentIndex((prevIndex) => (prevIndex + 1) % allCompanies.length);
-        }
-      }, 2000); // scroll speed
+        let animationFrameId: number;
+
+        const animate = () => {
+            if (!isPaused && carouselRef.current) {
+                let current = (carouselRef.current as HTMLDivElement);
+                current.scrollLeft += 1;
+                if (current.scrollLeft >= current.scrollWidth / 2) {
+                    current.scrollLeft = 0;
+                }
+                animationFrameId = requestAnimationFrame(animate);
+            }
+        };
+
+        animate();
   
-      return () => clearInterval(interval);
-    }, [isPaused, companies.length, currentIndex]);
+        return () => {
+            cancelAnimationFrame(animationFrameId);
+        };
+    }, [isPaused]);
   
     const handleMouseEnter = () => setIsPaused(true);
     const handleMouseLeave = () => setIsPaused(false);
-    
+  
     return (
-      <div
-        ref={carouselRef}
-        className={`flex justify-center items-center overflow-hidden relative`}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
         <div
-          className="flex transition-transform"
-          style={{
-            transform: `translateX(-${currentIndex * 100 / (companies.length - 1)}%)`,
-            width: `${(companies.length - 1) / companies.length * 100}%`,
-          }}
+            ref={carouselRef}
+            className="flex justify-center items-center overflow-x-hidden relative w-[75%] sm:w-full md:w-[75%] lg:w-[60%] xl:w-[50%]"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
         >
-          {allCompanies.map((company, index) => (
-            <a
-              key={index}
-              href={company.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-75 transition-opacity flex-shrink-0"
+            <div
+                className="flex transition-transform items-center space-x-4"
+                style={{ width: `${allCompanies.length * 100}%` }}
             >
-              {company.logo}
-            </a>
-          ))}
+                {allCompanies.map((company, index) => (
+                    <a
+                        key={index}
+                        href={company.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:opacity-75 transition-opacity flex-shrink-0"
+                    >
+                        {company.logo}
+                    </a>
+                ))}
+            </div>
         </div>
-      </div>
     );
   }
   

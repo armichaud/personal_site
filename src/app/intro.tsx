@@ -54,7 +54,7 @@ const Intro: React.FC = () => {
                     <img className="rounded-lg md:absolute md:-top-[20%] lg:-top-[30%] xl:-top-[50%] w-[100%]" src="https://imagedelivery.net/Xh-8qVol1Pftdals16ieKg/ccbbd565-53b4-4780-7fee-b4bcef64c100/public" alt="profile_pic" /> 
                 </div>
                 <section className="px-8 xl:px-12 py-0 sm:w-1/2 flex flex-col mt-14 sm:mt-0">
-                    <div className='flex flex-col justify-center mb-12 sm:mb-8'>
+                    <div className='flex flex-col justify-center items-center mb-12 sm:mb-8'>
                         <h2 className="text-2xl lg:text-3xl font-bold mb-1 text-center">Where I&apos;ve Been</h2> 
                         <LogoCarousel />
                     </div>
