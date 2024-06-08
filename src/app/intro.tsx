@@ -10,7 +10,7 @@ const Intro: React.FC = () => {
             <p className='mb-2 sm:text-2xl'>or ARM, if you&apos;re in a hurry</p>
             <div className='flex p-4 align-center flex-col sm:flex-row mt-6'>
                 <div className="rounded-lg sm:w-1/2 md:relative md:overflow-hidden">
-                    <img className="rounded-lg md:absolute md:-top-[20%] lg:-top-[30%] xl:-top-[50%] w-[100%]" src="https://imagedelivery.net/Xh-8qVol1Pftdals16ieKg/ccbbd565-53b4-4780-7fee-b4bcef64c100/public" alt="profile_pic" /> 
+                    <img className="rounded-lg md:absolute md:-top-[20%] lg:-top-[35%] xl:-top-[53%] w-[100%]" src="https://imagedelivery.net/Xh-8qVol1Pftdals16ieKg/ccbbd565-53b4-4780-7fee-b4bcef64c100/public" alt="profile_pic" /> 
                 </div>
                 <section className="px-8 xl:px-12 py-0 sm:w-1/2 flex flex-col mt-14 sm:mt-0">
                     <div className='flex flex-col justify-center items-center mb-12 sm:mb-8'>

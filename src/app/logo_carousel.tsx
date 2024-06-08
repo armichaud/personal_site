@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const companies = [
     {
@@ -24,28 +24,22 @@ const companies = [
   ];
 
 const LogoCarousel = () => {
-    const carouselRef = useRef(null);
-  
+    const carouselRef = useRef<HTMLDivElement>(null);
     const allCompanies = [...companies, ...companies];
-  
-    useEffect(() => {
-        let animationFrameId: number;
+    
 
+    useEffect(() => {
         const animate = () => {
             if (carouselRef.current) {
-                let current = carouselRef.current as HTMLDivElement;
-                if (animationFrameId % 4 === 0) current.scrollLeft += 1;
-                if (current.scrollLeft >= current.scrollWidth / 2) {
-                    current.scrollLeft = 0;
+                carouselRef.current.scrollLeft += 1;
+                if (carouselRef.current.scrollLeft >= carouselRef.current.scrollWidth / 2) {
+                    carouselRef.current.scrollLeft = 0;
                 }
-                animationFrameId = requestAnimationFrame(animate);
             }
         };
-
-        animate();
-  
+        const intervalId = setInterval(animate, 24);
         return () => {
-            cancelAnimationFrame(animationFrameId);
+            clearInterval(intervalId);
         };
     }, []);
   
