@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react';
+import LogoCarousel from './logo_carousel';
 
 const CompanyIconsRow: React.FC = () => {
     const companies = [
@@ -55,7 +56,7 @@ const Intro: React.FC = () => {
                 <section className="px-8 xl:px-12 py-0 sm:w-1/2 flex flex-col mt-14 sm:mt-0">
                     <div className='flex flex-col justify-center mb-12 sm:mb-8'>
                         <h2 className="text-2xl lg:text-3xl font-bold mb-1 text-center">Where I&apos;ve Been</h2> 
-                        <CompanyIconsRow />
+                        <LogoCarousel />
                     </div>
                     <div className='flex flex-col justify-center mb-12 sm:mb-8'>
                         <h2 className="text-2xl lg:text-3xl font-bold mb-1 text-center">What I&apos;ve Done</h2>
