@@ -185,5 +185,3 @@ const ProjectListWithApollo = () => (
 );
 
 export default ProjectListWithApollo;
-
-  

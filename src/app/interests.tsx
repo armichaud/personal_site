@@ -1,14 +1,9 @@
 'use client'
 
-import { useEffect, useState } from "react";
-import Loading from "./loading";
-
-const STATS_URL = 'https://api.chess.com/pub/player/alexanderrodion/stats';
-
 const Yale = (): JSX.Element => (
-    <div className="mb-12">
+    <div className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Alumni Service</h2>
-        <div className="flex flex-col p-4 border rounded-md shadow-md mb-4">
+        <div className="flex flex-col p-4 border rounded-md shadow-md">
             <h3 className="text-lg font-semibold underline">The Yale Club of Boston</h3>
             <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="my-2">
@@ -36,40 +31,16 @@ const Yale = (): JSX.Element => (
     </div>
 );
 
-const getRatings = async () => {
-    const response = await fetch(STATS_URL);
-    const data = await response.json();
-    return [data?.chess_bullet?.last?.rating, data?.chess_blitz?.last?.rating];
-}
-
 const Chess = (): JSX.Element => {
-    const [ratings, setRatings] = useState({bullet_rating: 0, blitz_rating: 0});
-    useEffect(() => {
-        const fetchData = async () => {
-            const [bullet_rating, blitz_rating] = await getRatings();
-            setRatings({ bullet_rating, blitz_rating });
-        };
-
-        fetchData();
-    }, []);
-
     return (
-    <div className="flex flex-col mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Chess</h2>
-        <div className="flex space-x-4">
-            <div key="rapid" className="border p-4 rounded-lg shadow">
-                <h3 className="text-lg font-semibold">Bullet Rating</h3>
-                {ratings.bullet_rating ? <p className="text-gray-600">{ratings.bullet_rating}</p> : <Loading size={20} />}
+        <div className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">Chess</h2>  
+            <div className="flex flex-col p-4 border rounded-md shadow-md">
+                <h3>
+                    Play with me on lichess: <a href="https://lichess.org/@/armichaud" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:underline">armichaud</a>
+                </h3> 
             </div>
-            <div key="blitz" className="border p-4 rounded-lg shadow">
-                <h3 className="text-lg font-semibold">Blitz Rating</h3>
-                {ratings.blitz_rating ? <p className="text-gray-600">{ratings.blitz_rating}</p> : <Loading size={20} />}
-            </div> 
         </div>
-        <h3 className="mt-4">
-            Play with me on chess.com: <a href="https://www.chess.com/member/alexanderrodion" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:underline">alexanderrodion</a>
-        </h3> 
-    </div>
 )};
 
 interface Film {
@@ -260,7 +231,7 @@ const favoriteFilms: Film[] = [
 
 const FavoriteMovies: React.FC = () => {
     return (
-      <div className="mb-12">
+      <div className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Top 25 Favorite Films</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {favoriteFilms.map((movie, index) => (
@@ -394,6 +365,7 @@ const FavoriteBooks: React.FC = () => {
 const Interests = () => (
     <div>
         <Yale />
+        <Chess />
         <FavoriteMovies />
         <FavoriteBooks />
     </div>

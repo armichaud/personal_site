@@ -69,3 +69,4 @@ const LogoCarousel = () => {
   }
   
   export default LogoCarousel;
+  
