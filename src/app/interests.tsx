@@ -117,6 +117,13 @@ const favoriteFilms: Film[] = [
         link: 'https://www.imdb.com/title/tt0116282/'
     },
     {
+        title: 'Night of the Hunter',
+        year: 1955,
+        director: 'Charles Laughton',
+        imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a5/The_Night_of_the_Hunter_%281955_poster%29.jpg',
+        link: 'https://www.imdb.com/title/tt0048424/'
+    },
+    {
         title: 'The Royal Tenenbaums',
         year: 2001,
         director: 'Wes Anderson',
@@ -129,6 +136,13 @@ const favoriteFilms: Film[] = [
         director: 'Mike Nichols',
         imgUrl: 'https://upload.wikimedia.org/wikipedia/en/8/8b/Graduateposter67.jpg',
         link: 'https://www.imdb.com/title/tt0061722/'
+    },
+    {
+        title: 'Sansho the Bailiff',
+        year: 1954,
+        director: 'Kenji Mizoguchi',
+        imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8f/Sansho_Dayu_poster.jpg',
+        link: 'https://www.imdb.com/title/tt0047445/'
     },
     {
         title: 'The Red Shoes',
@@ -159,11 +173,25 @@ const favoriteFilms: Film[] = [
         link: 'https://www.imdb.com/title/tt0068361/'
     },
     {
+        title: 'Blow Out',
+        year: 1981,
+        director: 'Brian De Palma',
+        imgUrl: 'https://upload.wikimedia.org/wikipedia/en/c/ce/Blow_outENG.jpg',
+        link: 'https://www.imdb.com/title/tt0082085/'
+    },
+    {
         title: 'Fanny and Alexander',
         year: 1982,
         director: 'Ingmar Bergman',
         imgUrl: 'https://upload.wikimedia.org/wikipedia/en/5/56/Fanny%26Alexander.jpg',
         link: 'https://www.imdb.com/title/tt0083922/'
+    },
+    {
+        title: 'Anatomy of a Murder',
+        year: 1959,
+        director: 'Otto Preminger',
+        imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/AnatomyMurder2.jpg',
+        link: 'https://www.imdb.com/title/tt0052561/'
     },
     {
         title: 'A Serious Man',
@@ -199,13 +227,20 @@ const favoriteFilms: Film[] = [
         director: 'Federico Fellini',
         imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/ff/La_Strada.jpg',
         link: 'https://www.imdb.com/title/tt0047528/'
+    },
+    {
+        title: 'Y Tu Mamá También',
+        year: 2001,
+        director: 'Alfonso Cuarón',
+        imgUrl: 'https://upload.wikimedia.org/wikipedia/en/6/63/Y_tu_mamá_también_poster.png',
+        link: 'https://www.imdb.com/title/tt0245574/'
     }
 ];
 
 const FavoriteMovies: React.FC = () => {
     return (
       <div className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Favorite Movies</h2>
+        <h2 className="text-2xl font-semibold mb-4">Top 25 Favorite Films</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {favoriteFilms.map((movie, index) => (
             <div key={index} className="border p-4 rounded-lg shadow">
