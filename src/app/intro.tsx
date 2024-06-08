@@ -20,12 +20,12 @@ const Intro: React.FC = () => {
                     <div className='flex flex-col justify-center mb-12 sm:mb-8'>
                         <h2 className="text-2xl lg:text-3xl font-bold mb-1 text-center">What I&apos;ve Done</h2>
                         <p className='text-center lg:text-lg'>
-                          Developed apps for the web (NextJS, Ruby on Rails, PHP) and Android (Java/Kotlin), managed QA devs at a SaaS startup, and owned backend for notifications from an ecommerce site. 
+                          Developed apps for the web (NextJS, Ruby on Rails, PHP) and Android (Java/Kotlin), managed QA devs at a SaaS startup, and owned backend for notifications from an ecommerce site
                         </p>
                     </div>
                     <div className='flex flex-col justify-center'>
                         <h2 className="text-2xl lg:text-3xl font-bold mb-1 md:mb-2 text-center">What I&apos;m Doing</h2>
-                        <p className='text-center lg:text-lg'>Automating safety compliance checks for AWS resources in Python with <a className="text-orange-500 hover:underline" href="https://cloudcustodian.io">Cloud Custodian</a>.</p>
+                        <p className='text-center lg:text-lg'>Automating safety compliance checks for AWS resources in Python with <a className="text-orange-500 hover:underline" href="https://cloudcustodian.io">Cloud Custodian</a></p>
                     </div>
                 </section>
             </div>

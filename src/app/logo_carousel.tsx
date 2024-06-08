@@ -24,7 +24,6 @@ const companies = [
   ];
 
 const LogoCarousel = () => {
-    const [isPaused, setIsPaused] = useState(false);
     const carouselRef = useRef(null);
   
     const allCompanies = [...companies, ...companies];
@@ -33,8 +32,8 @@ const LogoCarousel = () => {
         let animationFrameId: number;
 
         const animate = () => {
-            if (!isPaused && carouselRef.current) {
-                let current = (carouselRef.current as HTMLDivElement);
+            if (carouselRef.current) {
+                let current = carouselRef.current as HTMLDivElement;
                 if (animationFrameId % 4 === 0) current.scrollLeft += 1;
                 if (current.scrollLeft >= current.scrollWidth / 2) {
                     current.scrollLeft = 0;
@@ -48,21 +47,12 @@ const LogoCarousel = () => {
         return () => {
             cancelAnimationFrame(animationFrameId);
         };
-    }, [isPaused]);
-  
-    const handleMouseEnter = () => setIsPaused(true);
-    const handleLeaveUpEndCancel = () => setIsPaused(false);
+    }, []);
   
     return (
         <div
             ref={carouselRef}
             className="flex space-x-4 overflow-x-hidden relative w-[75%] sm:w-full md:w-[75%] lg:w-[60%] xl:w-[50%]"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleLeaveUpEndCancel}
-            onMouseUp={handleLeaveUpEndCancel}
-            onMouseOut={handleLeaveUpEndCancel}
-            onTouchCancel={handleLeaveUpEndCancel}
-            onTouchEnd={handleLeaveUpEndCancel}
         >
             <div
                 className="flex transition-transform items-center"
