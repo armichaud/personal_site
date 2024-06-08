@@ -29,7 +29,14 @@ const TabbedContent: React.FC<TabbedContentProps> = ({ tabs }) => {
   };
 
   useEffect(() => {
-    // Fire custom event to let Three.js know that the tab has changed and to rerender the scene
+    const savedTab = localStorage.getItem('activeTab');
+    if (savedTab) {
+      setActiveTab(savedTab);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('activeTab', activeTab);
     const event = new CustomEvent('tabChanged');
     window.dispatchEvent(event);
   }, [activeTab]);

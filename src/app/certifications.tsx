@@ -5,7 +5,7 @@ const Certifications = (): JSX.Element => {
     <div>
       <div>
         <h1 className="text-2xl font-semibold mb-2">Certifications</h1>
-        <p>The code behind embedded badges is controlled by the certification issuer. If badges do not display correctly, reload the page.</p>
+        <p>The code behind embedded badges is controlled by the certification issuer and does not work consistently. If badges do not display properly, reload the page.</p>
       </div>
       <div className="mt-8">
         <div 
