@@ -159,6 +159,13 @@ const favoriteFilms: Film[] = [
         link: 'https://www.imdb.com/title/tt0245712/'
     },
     {
+        title: 'The Lives of Others',
+        year: 2006,
+        director: 'Florian Henckel von Donnersmarck',
+        imgUrl: 'https://upload.wikimedia.org/wikipedia/en/9/9f/Leben_der_anderen.jpg',
+        link: 'https://www.imdb.com/title/tt0405094/'
+    },
+    {
         title: 'The Juniper Tree',
         year: 1990,
         director: 'Nietzchka Keene',
@@ -178,6 +185,13 @@ const favoriteFilms: Film[] = [
         director: 'Brian De Palma',
         imgUrl: 'https://upload.wikimedia.org/wikipedia/en/c/ce/Blow_outENG.jpg',
         link: 'https://www.imdb.com/title/tt0082085/'
+    },
+    {
+        title: 'Mishima: A Life in Four Chapters',
+        year: 1985,
+        director: 'Paul Schrader',
+        imgUrl: 'https://upload.wikimedia.org/wikipedia/en/a/ad/Mishima.jpg',
+        link: 'https://www.imdb.com/title/tt0089603/'
     },
     {
         title: 'Fanny and Alexander',
@@ -220,6 +234,13 @@ const favoriteFilms: Film[] = [
         director: 'David Cronenberg',
         imgUrl: 'https://upload.wikimedia.org/wikipedia/en/a/aa/Fly_poster.jpg',
         link: 'https://www.imdb.com/title/tt0091064/'
+    },
+    {
+        title: 'Grand Illusion',
+        year: 1937,
+        director: 'Jean Renoir',
+        imgUrl: 'https://upload.wikimedia.org/wikipedia/en/3/33/GrandeIllusion.jpg',
+        link: 'https://www.imdb.com/title/tt0028950/'
     },
     {
         title: 'La Strada',
@@ -318,13 +339,45 @@ const favoriteBooks: Book[] = [
     {
         title: 'Brave New World',
         author: 'Aldous Huxley'
+    },
+    {
+        title: 'The Master and Margarita',
+        author: 'Mikhail Bulgakov'
+    },
+    {
+        title: 'The Unbearable Lightness of Being',
+        author: 'Milan Kundera'
+    },
+    {
+        title: 'The Mezzanine',
+        author: 'Nicholson Baker'
+    },
+    {
+        title: 'East of Eden',
+        author: 'John Steinbeck'
+    },
+    {
+        title: 'Catch-22',
+        author: 'Joseph Heller'
+    },
+    {
+        title: 'Rabbit, Run',
+        author: 'John Updike'
+    },
+    {
+        title: 'American Psycho',
+        author: 'Bret Easton Ellis'
+    },
+    {
+        title: 'The Satanic Verses',
+        author: 'Salman Rushdie'
     }
 ];
 
 const FavoriteBooks: React.FC = () => {
     return (
       <div>
-        <h2 className="text-2xl font-semibold mb-4">Favorite Books</h2>
+        <h2 className="text-2xl font-semibold mb-4">Top 20 Favorite Books</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {favoriteBooks.map((book, index) => (
             <div key={index} className="border p-4 rounded-lg shadow">
