@@ -36,7 +36,6 @@ const LogoCarousel = () => {
             if (!isPaused && carouselRef.current) {
                 let current = (carouselRef.current as HTMLDivElement);
                 if (animationFrameId % 4 === 0) current.scrollLeft += 1;
-                // current.scrollLeft += 1;
                 if (current.scrollLeft >= current.scrollWidth / 2) {
                     current.scrollLeft = 0;
                 }
@@ -52,14 +51,18 @@ const LogoCarousel = () => {
     }, [isPaused]);
   
     const handleMouseEnter = () => setIsPaused(true);
-    const handleMouseLeave = () => setIsPaused(false);
+    const handleLeaveUpEndCancel = () => setIsPaused(false);
   
     return (
         <div
             ref={carouselRef}
             className="flex space-x-4 overflow-x-hidden relative w-[75%] sm:w-full md:w-[75%] lg:w-[60%] xl:w-[50%]"
             onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            onMouseLeave={handleLeaveUpEndCancel}
+            onMouseUp={handleLeaveUpEndCancel}
+            onMouseOut={handleLeaveUpEndCancel}
+            onTouchCancel={handleLeaveUpEndCancel}
+            onTouchEnd={handleLeaveUpEndCancel}
         >
             <div
                 className="flex transition-transform items-center"
