@@ -2,10 +2,23 @@ import { JobExperienceProps } from "./resume";
 
 const RESUME_DATA: JobExperienceProps[] = [
     {
+      jobTitle: "Senior Software Engineer",
+      company: "Capital One",
+      startDate: "April 2024",
+      endDate: "Present",
+      bullets: [
+        "Coding Cloud Custodian controls in Python, to ensure Capital One cloud resources remain in compliance with policies established by the cybersecurity division.",
+        "Contributing open source enhancements to Cloud Custodian to enable controls for previously unsupported cloud resource types.",
+        "Wrote automated tests to run policies against ephemeral cloud resources provisioned using Terraform.",
+        "Certified as an AWS Solutions Architect within 4 weeks of joining the company, in order to establish deep expertise with Capital One's primary cloud service provider.",
+        "Worked on the winning project in a 2-day Cloud Safety Hackathon on a team that developed a proof-of-concept for empowering developers to run Cloud Custodian compliance validation on-demand.",
+      ]
+    },
+    {
       jobTitle: "Android Engineer",
       company: "Drizly",
       startDate: "Sep 2023",
-      endDate: "Present",
+      endDate: "March 2024",
       bullets: [
         "Learned Kotlin/Java on the job to become 1 of 3 Drizly Android developers, working to achieve feature parity with browser and iOS versions of the Drizly app experience.",
         "Architected and implemented pages entirely configurable via content management services, empowering marketers to build and instantly deploy themed/seasonal product and brand collections to Drizly’s Android app.",

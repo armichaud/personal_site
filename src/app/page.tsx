@@ -4,6 +4,7 @@ import Intro from "./intro";
 import TabbedContent from "./tabbed_content";
 import Education from "./education";
 import Interests from "./interests";
+import Certifications from "./certifications";
 
 const tabs = [
   {
@@ -12,14 +13,19 @@ const tabs = [
     content: <Intro />
   },
   {
+    id: 'resume',
+    label: 'Résumé',
+    content: <Resume />,
+  },
+  {
     id: 'projects',
     label: 'Projects',
     content: <Projects />
   },
   {
-    id: 'resume',
-    label: 'Résumé',
-    content: <Resume />,
+    id: 'certifications',
+    label: 'Certifications',
+    content: <Certifications/>
   },
   {
     id: 'education',
