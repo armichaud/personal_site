@@ -16,44 +16,6 @@ const schema = [
     },
     {
         "@context": "http://schema.org",
-        "@type": "EducationalOrganization",
-        "name": "Startup Institute",
-        "location": "Boston, MA",
-        "url": "https://www.startupinstitute.com"
-    },
-    {
-        "@context": "http://schema.org",
-        "@type": "EducationEvent",
-        "name": "Web Development Fellowship",
-        "description": "Trained in professional full-stack development, primarily building web apps using Ruby on Rails.",
-        "startDate": "2018-01-01",
-        "endDate": "2018-04-30",
-        "location": {
-            "@type": "Place",
-            "name": "Startup Institute"
-        }
-    },
-    {
-        "@context": "http://schema.org",
-        "@type": "EducationalOrganization",
-        "name": "Yale University",
-        "location": "New Haven, CT",
-        "url": "https://www.yale.edu"
-    },
-    {
-        "@context": "http://schema.org",
-        "@type": "EducationEvent",
-        "name": "B.A. in English",
-        "description": "Primary academic interests included Shakespeare and Film Theory.",
-        "startDate": "2012-08-01",
-        "endDate": "2017-05-31",
-        "location": {
-            "@type": "Place",
-            "name": "Yale University"
-        }
-    },
-    {
-        "@context": "http://schema.org",
         "@type": "SoftwareApplication",
         "name": "Chicken Esolang Interpreter",
         "description": "An interpreter for the Chicken esoteric programming language.",
