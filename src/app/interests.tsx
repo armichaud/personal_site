@@ -24,7 +24,7 @@ const Yale = (): JSX.Element => (
                 </div>
                 <div className="my-2">
                     <h4 className="text-lg font-semibold pl-4">Board Member</h4>
-                    <p className="text-gray-600 pl-4">2019 - Present</p>
+                    <p className="text-gray-600 pl-4">2019 - 2024</p>
                 </div>
             </div>
         </div>
