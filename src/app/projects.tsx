@@ -110,6 +110,26 @@ const ProjectList: React.FC = () => {
 
     return (
         <div>
+            <h2 className="text-2xl font-semibold mt-8 mb-2">Open Source Contributions</h2>
+            <p className='mb-4'>
+                {data ? 
+                    "I'm accumulating open source karma! Below you'll find links to the PRs that I've merged into public projects, organized by repository. The list is fetched programmatically using the GitHub GraphQL API." :
+                    loading ? 
+                        (<Loading />) :
+                        "This is where my list of merged open source PRs would appear, but it looks like there was an issue fetching them from GitHub."
+                }
+            </p>
+            <div className='flex flex-col'>
+                {openSourceRepos && openSourceRepos.map((repo, index) => (
+                    <a 
+                        className="text-orange-500 hover:underline mb-2"
+                        key={index} 
+                        href={`https://github.com/${repo}/pulls?q=is%3Apr+is%3Aclosed+author%3Aarmichaud`}
+                    >
+                        {repo}
+                    </a>
+                ))}
+            </div>
             <h2 className="text-2xl font-semibold mb-4">Projects</h2>
             <ul className="space-y-4">
                 {PROJECTS.map((project, index) => (
@@ -156,24 +176,6 @@ const ProjectList: React.FC = () => {
                     </li>
                 ))}
             </ul>
-            <h2 className="text-2xl font-semibold mt-8 mb-2">Open Source Contributions</h2>
-            <p className='mb-4'>
-                {data ? 
-                    "I'm accumulating open source karma! Below you'll find links to the PRs that I've merged into public projects, organized by repository. The list is fetched programmatically using the GitHub GraphQL API." :
-                    loading ? 
-                        (<Loading />) :
-                        "This is where my list of merged open source PRs would appear, but it looks like there was an issue fetching them from GitHub."
-                }
-            </p>
-            {openSourceRepos && openSourceRepos.map((repo, index) => (
-                <a 
-                    className="text-orange-500 hover:underline mb-2"
-                    key={index} 
-                    href={`https://github.com/${repo}/pulls?q=is%3Apr+is%3Aclosed+author%3Aarmichaud`}
-                >
-                    {repo}
-                </a>
-            ))}
         </div>
     );
 };
