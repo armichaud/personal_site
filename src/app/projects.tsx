@@ -119,7 +119,7 @@ const ProjectList: React.FC = () => {
                         "This is where my list of merged open source PRs would appear, but it looks like there was an issue fetching them from GitHub."
                 }
             </p>
-            <div className='flex flex-col'>
+            <div className='flex flex-col mb-4'>
                 {openSourceRepos && openSourceRepos.map((repo, index) => (
                     <a 
                         className="text-orange-500 hover:underline mb-2"
