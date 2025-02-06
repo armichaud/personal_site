@@ -5,11 +5,3 @@
 html {
     font-family: 'Courier New', monospace;
 }
-
-h1, h2, h3, h4, p {
-  @apply dark:text-white;
-}
-
-p.dark-grey {
-    @apply dark:text-gray-400;
-}

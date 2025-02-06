@@ -42,6 +42,9 @@ const Main = (): JSX.Element => {
                 <div>
                     <a href="https://medium.com/@alexander.michaud">&gt; medium</a>
                 </div>
+                <div>
+                    <a href="/Michaud_CV_2025.pdf" target="_blank">&gt; résumé</a>
+                </div>
             </div>
             <div className="mt-6">
                 <p>projects</p>
