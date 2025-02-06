@@ -87,7 +87,7 @@ const Main = (): JSX.Element => {
                         projectSelected == Project.RSVP_SERVERLESS && 
                         (   
                             <div>
-                                &nbsp;&nbsp;&nbsp;<a href="https://github.com/armichaud/wedding-rsvp-serverless">code</a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/armichaud/wedding-rsvp-serverless">code</a>
                             </div>
                         )
                     }
