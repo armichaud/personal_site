@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 html {
-    font-family: 'Courier New', monospace;
+    font-family: 'Jura', serif;
+}
+
+a, .greenText {
+  @apply text-green-600
 }

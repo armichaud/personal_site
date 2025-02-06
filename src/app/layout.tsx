@@ -28,10 +28,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet"></link>
         <SchemaMarkup />
       </head>
-      <body className="bg-black text-green-600">
+      <body className="bg-black text-white">
         <div className="flex flex-col justify-center">
           {children}
         </div>

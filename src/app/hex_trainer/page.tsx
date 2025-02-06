@@ -16,7 +16,7 @@ const HexTrainer = (): JSX.Element => {
     // return <>
     //     {Object.values(Training).map(training => <button>{training}</button>)}
     // </>
-    return <div>This UI for this app is in progress. Download the code <a className="font-semibold" href="https://github.com/armichaud/hex_trainer">here</a> to use the CLI and start training today.</div>
+    return <div>This UI for this app is in progress. Download the code <a href="https://github.com/armichaud/hex_trainer">here</a> to use the CLI and start training today.</div>
 }
 
 export default HexTrainer;

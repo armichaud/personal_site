@@ -48,7 +48,7 @@ const Main = (): JSX.Element => {
             </div>
             <div className="mt-6">
                 <p>projects</p>
-                <div>
+                <div className="greenText">
                     <button onClick={() => selectProject(Project.HEX_MATH_TRAINER)}>&gt; hexadecimal math trainer</button>
                     {
                         projectSelected == Project.HEX_MATH_TRAINER && 
@@ -59,7 +59,7 @@ const Main = (): JSX.Element => {
                         )
                     }
                 </div>
-                <div>
+                <div className="greenText">
                     <button onClick={() => selectProject(Project.CHICKEN_INTERPRETER)}>&gt; chicken esolang interpreter</button>
                     {
                         projectSelected == Project.CHICKEN_INTERPRETER && 
@@ -70,7 +70,7 @@ const Main = (): JSX.Element => {
                         )
                     }
                 </div>
-                <div>
+                <div className="greenText">
                     <button onClick={() => selectProject(Project.WEDDING_WEBSITE)}>&gt; my wedding website</button>
                     {
                         projectSelected == Project.WEDDING_WEBSITE && 
@@ -81,7 +81,7 @@ const Main = (): JSX.Element => {
                         )
                     }
                 </div>
-                <div>
+                <div className="greenText">
                     <button onClick={() => selectProject(Project.RSVP_SERVERLESS)}>&gt; rsvp serverless lambda</button>
                     {
                         projectSelected == Project.RSVP_SERVERLESS && 
@@ -95,8 +95,8 @@ const Main = (): JSX.Element => {
             </div>
             <div className="mt-6">
                 <p>certifications</p>
-                <div>&gt; <a href="https://www.credly.com/badges/4acf7de6-b12e-4bda-ae42-7c524d073708/public_url">aws associate solutions architect</a></div>
-                <div>&gt; <a href="https://www.credly.com/badges/ac5b8711-c0aa-49b9-9d8e-0c9090860a28/public_url">hashicorp terraform associate</a></div>
+                <div><a href="https://www.credly.com/badges/4acf7de6-b12e-4bda-ae42-7c524d073708/public_url">&gt; aws associate solutions architect</a></div>
+                <div><a href="https://www.credly.com/badges/ac5b8711-c0aa-49b9-9d8e-0c9090860a28/public_url">&gt; hashicorp terraform associate</a></div>
             </div>
         </div>
     </div>
