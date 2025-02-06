@@ -31,7 +31,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri"></link>
         <SchemaMarkup />
       </head>
-      <body className="dark:bg-gray-950">
+      <body className="bg-black text-green-600">
         <div className="flex flex-col justify-center">
           {children}
         </div>

@@ -13,9 +13,10 @@ enum Training {
 const HexTrainer = (): JSX.Element => {
     const [selectedTraining, setSelectedTraining] = useState<Training | null>(null);
 
-    return <>
-        {Object.values(Training).map(training => <button>{training}</button>)}
-    </>
+    // return <>
+    //     {Object.values(Training).map(training => <button>{training}</button>)}
+    // </>
+    return <div>This UI for this app is in progress. Download the code <a className="font-semibold" href="https://github.com/armichaud/hex_trainer">here</a> to use the CLI and start training today.</div>
 }
 
 export default HexTrainer;

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-    font-family: 'Amiri', serif;
+    font-family: 'Courier New', monospace;
 }
 
 h1, h2, h3, h4, p {
