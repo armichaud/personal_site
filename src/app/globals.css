@@ -6,6 +6,6 @@ html {
     font-family: 'Jura', serif;
 }
 
-a, .greenText {
+a, button {
   @apply text-green-600
 }

@@ -48,7 +48,7 @@ const Main = (): JSX.Element => {
             </div>
             <div className="mt-6">
                 <p>projects</p>
-                <div className="greenText">
+                <div>
                     <button onClick={() => selectProject(Project.HEX_MATH_TRAINER)}>&gt; hexadecimal math trainer</button>
                     {
                         projectSelected == Project.HEX_MATH_TRAINER && 
@@ -59,7 +59,7 @@ const Main = (): JSX.Element => {
                         )
                     }
                 </div>
-                <div className="greenText">
+                <div>
                     <button onClick={() => selectProject(Project.CHICKEN_INTERPRETER)}>&gt; chicken esolang interpreter</button>
                     {
                         projectSelected == Project.CHICKEN_INTERPRETER && 
@@ -70,7 +70,7 @@ const Main = (): JSX.Element => {
                         )
                     }
                 </div>
-                <div className="greenText">
+                <div>
                     <button onClick={() => selectProject(Project.WEDDING_WEBSITE)}>&gt; my wedding website</button>
                     {
                         projectSelected == Project.WEDDING_WEBSITE && 
@@ -81,7 +81,7 @@ const Main = (): JSX.Element => {
                         )
                     }
                 </div>
-                <div className="greenText">
+                <div>
                     <button onClick={() => selectProject(Project.RSVP_SERVERLESS)}>&gt; rsvp serverless lambda</button>
                     {
                         projectSelected == Project.RSVP_SERVERLESS && 
