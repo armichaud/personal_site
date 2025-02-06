@@ -19,7 +19,7 @@ const Main = (): JSX.Element => {
     <div className="p-4">
         <div className="rounded-lg relative object-cover">
             <img 
-                className="rounded-lg absolute top-5 right-0 sm:right-5 w-[25%] xl:w-[33%] xl:-top-[45%] xl:right-6 object-contain" 
+                className="rounded-lg absolute top-6 right-0 sm:right-5 w-[25%] xl:w-[33%] xl:-top-[45%] xl:right-6 xl:top-6 object-contain" 
                 src="https://imagedelivery.net/Xh-8qVol1Pftdals16ieKg/43792e9f-d08c-4484-db62-c865f88f8400/public" 
                 alt="profile_pic"
             /> 
