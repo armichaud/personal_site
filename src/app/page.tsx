@@ -19,14 +19,15 @@ const Main = (): JSX.Element => {
     <div className="p-4">
         <div className="rounded-lg relative object-cover">
             <img 
-                className="rounded-lg absolute top-6 md:top-0 right-0 w-[25%] xl:w-[40%] xl:-top-[45%] xl:right-6 object-contain" 
+                className="rounded-lg absolute top-5 right-0 sm:right-5 w-[25%] xl:w-[40%] xl:-top-[45%] xl:right-6 object-contain" 
                 src="https://imagedelivery.net/Xh-8qVol1Pftdals16ieKg/ccbbd565-53b4-4780-7fee-b4bcef64c100/public" 
                 alt="profile_pic"
             /> 
         </div>
         <div className='flex p-4 flex-col'>
             <p className="text-3xl sm:text-4xl lg:text-5xl mb-1 w-3/4">alexander rodion michaud</p>
-            <p className='sm:text-2xl'>senior software engineer</p>
+            <p className='sm:text-2xl mb-1'>senior software engineer</p>
+            <p className="mb-2">washington, dc</p>
             <div className="mt-6">
                 <p>links</p>
                 <div>
@@ -88,6 +89,11 @@ const Main = (): JSX.Element => {
                         )
                     }
                 </div>
+            </div>
+            <div className="mt-6">
+                <p>certifications</p>
+                <div>&gt; <a href="https://www.credly.com/badges/4acf7de6-b12e-4bda-ae42-7c524d073708/public_url">aws associate solutions architect</a></div>
+                <div>&gt; <a href="https://www.credly.com/badges/ac5b8711-c0aa-49b9-9d8e-0c9090860a28/public_url">hashicorp terraform associate</a></div>
             </div>
         </div>
     </div>
