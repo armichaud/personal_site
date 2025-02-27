@@ -1,22 +1,23 @@
 "use client";
 
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useState } from "react"
-
-enum Training {
-    HEX_TO_DEC = "Convert Hexadecimal to Decimal",
-    DEC_TO_HEX = "Convert Decimal to Hexadecimal",
-    SOLVE_EQ = "Solve an Equation with Hexadecimal Operands",
-}
-
-
+import SelectTrainingMode from "./select_training_mode";
 
 const HexTrainer = (): JSX.Element => {
-    const [selectedTraining, setSelectedTraining] = useState<Training | null>(null);
-
-    // return <>
-    //     {Object.values(Training).map(training => <button>{training}</button>)}
-    // </>
-    return <div>This UI for this app is in progress. Download the code <a href="https://github.com/armichaud/hex_trainer">here</a> to use the CLI and start training today.</div>
+    return (
+        <div>
+            <Card>
+                <CardHeader>
+                    <CardTitle>Hexadecimal Math Trainer</CardTitle>
+                    <CardDescription>Choose how you&apos;d like to train.</CardDescription>
+                </CardHeader>
+                <CardContent>
+                    <SelectTrainingMode />
+                </CardContent>
+            </Card>
+        </div>
+    );
 }
 
 export default HexTrainer;
