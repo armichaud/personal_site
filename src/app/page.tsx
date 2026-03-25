@@ -1,21 +1,4 @@
-"use client";
-
-import { useState } from "react";
-
-enum Project {
-    HEX_MATH_TRAINER,
-    CHICKEN_INTERPRETER,
-    WEDDING_WEBSITE,
-    RSVP_SERVERLESS
-}
-
-
-const Main = (): JSX.Element => {
-    const [projectSelected, setProjectSelected] = useState<Project | null>(null);
-    const selectProject = (project: Project) => {
-        setProjectSelected(project == projectSelected ? null : project)
-    };
-    return (
+const Main = (): JSX.Element => (
     <div className="p-4 xl:p-12">
         <div className="rounded-lg relative object-cover">
             <img 
@@ -47,60 +30,12 @@ const Main = (): JSX.Element => {
                 </div>
             </div>
             <div className="mt-6">
-                <p>projects</p>
-                <div>
-                    <button onClick={() => selectProject(Project.HEX_MATH_TRAINER)}>&gt; hexadecimal math trainer</button>
-                    {
-                        projectSelected == Project.HEX_MATH_TRAINER && 
-                        (   
-                            <div>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<a href="/hex_trainer">app</a> | <a href="https://github.com/armichaud/hex_trainer">code</a>
-                            </div>
-                        )
-                    }
-                </div>
-                <div>
-                    <button onClick={() => selectProject(Project.CHICKEN_INTERPRETER)}>&gt; chicken esolang interpreter</button>
-                    {
-                        projectSelected == Project.CHICKEN_INTERPRETER && 
-                        (   
-                            <div>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://crates.io/crates/chicken_esolang">crate</a> | <a href="https://github.com/armichaud/chicken_esolang">code</a>
-                            </div>
-                        )
-                    }
-                </div>
-                <div>
-                    <button onClick={() => selectProject(Project.WEDDING_WEBSITE)}>&gt; my wedding website</button>
-                    {
-                        projectSelected == Project.WEDDING_WEBSITE && 
-                        (   
-                            <div>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<a href="/wedding">app</a> | <a href="https://github.com/armichaud/wedding">code</a>
-                            </div>
-                        )
-                    }
-                </div>
-                <div>
-                    <button onClick={() => selectProject(Project.RSVP_SERVERLESS)}>&gt; rsvp serverless lambda</button>
-                    {
-                        projectSelected == Project.RSVP_SERVERLESS && 
-                        (   
-                            <div>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/armichaud/wedding-rsvp-serverless">code</a>
-                            </div>
-                        )
-                    }
-                </div>
-            </div>
-            <div className="mt-6">
                 <p>certifications</p>
                 <div><a href="https://www.credly.com/badges/4acf7de6-b12e-4bda-ae42-7c524d073708/public_url">&gt; aws associate solutions architect</a></div>
                 <div><a href="https://www.credly.com/badges/ac5b8711-c0aa-49b9-9d8e-0c9090860a28/public_url">&gt; hashicorp terraform associate</a></div>
             </div>
         </div>
     </div>
-)
-};
+);
 
 export default Main;
