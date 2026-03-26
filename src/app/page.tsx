@@ -26,7 +26,7 @@ const Main = (): JSX.Element => (
                     <a href="https://medium.com/@alexander.michaud">&gt; medium</a>
                 </div>
                 <div>
-                    <a href="/Michaud_CV_2025.pdf" target="_blank">&gt; résumé</a>
+                    <a href="/Michaud_CV_2026.pdf" target="_blank">&gt; résumé</a>
                 </div>
             </div>
             <div className="mt-6">
