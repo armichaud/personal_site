@@ -1,15 +1,5 @@
-import pic from './assets/outside_profile_pic.jpeg';
-import Image from 'next/image';
-
 const Main = (): JSX.Element => (
     <div className="p-4 xl:p-12">
-        <div className="rounded-lg relative object-cover">
-            <Image
-                className="rounded-lg absolute top-6 right-0 sm:right-5 w-[25%] xl:w-[33%] xl:-top-[45%] xl:right-12 xl:top-6 object-contain" 
-                src={pic}
-                alt="profile_pic"
-            /> 
-        </div>
         <div className='flex p-4 flex-col'>
             <p className="text-3xl sm:text-4xl lg:text-5xl mb-1 w-3/4">alexander rodion michaud</p>
             <p className='sm:text-2xl mb-1'>senior software engineer</p>
