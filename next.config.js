@@ -25,6 +25,15 @@ const nextConfig = {
     
         return config;
     },
+    async redirects() {
+        return [
+            {
+                source: '/wedding',
+                destination: '/404',
+                permanent: false, 
+            },
+        ];
+    },
 }
 
 module.exports = nextConfig;
